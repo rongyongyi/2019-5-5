@@ -1,0 +1,77 @@
+<!DOCTYPE html><html><head><title>第三周 第一天</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="第三周-第一天">第三周 第一天</h1>
+
+<h2 id="产品形态">产品形态</h2>
+
+<ul><li><p>pc端和移动端共用一个域名的就是共用一套代码</p></li>
+<li><p>pc端和移动端分开的，pc端单独一套，移动端单独一套</p>
+
+<blockquote>
+  <p>什么时候共用一套，什么时候单独一套？ <br>
+  当页面的结构、内容比较简单的时候，我们可以共用一套，如果网页的内容比较复杂，共用的时候会写大量的代码，不好维护，而且还影响页面加载速度，此时我们分开两套写</p>
+</blockquote></li>
+</ul>
+
+
+
+<h2 id="pc端和移动端的区别">pc端和移动端的区别</h2>
+
+<ul><li><p>pc端右鼠标的相关事件，比如点击、滑过，移动端没有，但是移动端右滑屏、触屏等相关的事件</p></li>
+<li><p>pc端需要兼容IE等浏览器，移动端不需要考虑这些问题，它的内核基本都是webkit内核，但是移动端我们需要考虑适配问题</p></li>
+</ul>
+
+<h2 id="html5新增标签">HTML5新增标签</h2>
+
+<table><tbody><tr style="font-weight:bold">  <td>标签名</td>  <td>描述</td></tr><tr>  <td>header</td>  <td>头部</td></tr><tr>  <td>nav</td>  <td>导航</td></tr><tr>  <td>section</td>  <td>定义文档中的节</td></tr><tr>  <td>aside</td>  <td>测边栏</td></tr><tr>  <td>article</td>  <td>文章</td></tr><tr>  <td>figure</td>  <td>定义独立流内容</td></tr><tr>  <td>figcaption</td>  <td>figure标题</td></tr><tr>  <td>footer</td>  <td>底部</td></tr><tr>  <td>audio</td>  <td>音频</td></tr><tr>  <td>video</td>  <td>视频</td></tr></tbody></table>
+
+
+
+<h2 id="如果让html5新增标签兼容低版本ie78浏览器">如果让HTML5新增标签兼容低版本(IE7/8)浏览器</h2>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="hljs xml"><div class="hljs-line"><span class="hljs-comment">&lt;!-- [if lt IE 9]&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment">&lt;script src="js/html5shiv.min.js"&gt;&lt;/script&gt;</span>
+</div><div class="hljs-line"><span class="hljs-comment">&lt;![endif] --&gt;</span>
+</div></code></pre>
+
+
+
+<h2 id="html5新增的表单输入类型">HTML5新增的表单输入类型</h2>
+
+<ul><li><p>type=”color” 从拾色器中选颜色</p></li>
+<li><p>type=”date”  日期选择器</p></li>
+<li><p>type=”datetime” 选择日期和时间(UTC时间)</p></li>
+<li><p>type=”datetime-local” 选择日期和时间(无时区)</p></li>
+<li><p>type=”email” 用于应该包含e-mail地址的输入域</p></li>
+<li><p>type=”month” 选择一个月份</p></li>
+<li><p>type=”number” 用于包含数值的输入域</p></li>
+<li><p>type=”search” 用于搜索域</p></li>
+<li><p>type=”tel” 定义输入电话号码字段</p></li>
+<li><p>type=”time” 选择一个时间</p></li>
+<li><p>type=”url” 用于应该包含URL地址的输入域</p></li>
+<li><p>type=”week” 允许选择周和年</p></li>
+</ul>
+
+
+
+<h2 id="视口">视口</h2>
+
+<blockquote>
+  <p>写移动端页面的时候，如果不加视口，html默认的宽度是980px,如果模拟iphone5的时候，手机屏幕的宽度是375px;把一个980px的页面放到375px的容器中，肯定会缩小，所以看不清除，所以在写移动端的时候我们必须加上视口</p>
+  
+  <ul><li><p>name=”viewport” 视口</p></li>
+  <li><p>width=”device-width” 让页面的宽度等于设备的宽度</p></li>
+  <li><p>initial-scale=1.0 初始缩放值为1.0</p></li>
+  <li><p>maximun-scale=1.0 最大的缩放值为1.0</p></li>
+  <li><p>minimun-scale=1.0 最新的缩放值为1.0</p></li>
+  </ul>
+</blockquote></div></body></html>
