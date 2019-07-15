@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义组件数据传递--->父传子</title>
+	
+</head>
+<body>
+	<div id="app">{{msg}}
+		<!-- 第一步，给儿子添加一个自定义属性，接收父组件的数据 -->
+		<child :m="msg"></child>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vm=new Vue({
+		el:"#app",
+		data:{msg:200},
+		components:{
+			child:{
+				// 处理自定义属性的值
+				//props:['m'],
+				// 也可以这么写，添加校验
+				props:{
+					m:{
+						type:[String,Function,Object],  //校验的类型
+						// default:0,  //默认值
+						required:true, //设置了此属性，m必须传值，但是不能和default 一起使用
+						validator(val){
+							//val是 m属性传递的值
+
+							//返回值如果是true，则表示通过，
+							//返回值如果是false，则表示不通过
+							return val>300;ccccc
+						}
+					},
+				},
+				//  使用自定义属性的值
+				template:"<div>儿子{{m}}</div>",
+			}
+		}
+	});
+</script>
+</html>

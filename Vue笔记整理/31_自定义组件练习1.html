@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义组件练习1</title>
+</head>
+<body>
+	<div id="app">
+		<!-- 自定义组件  template会把整个 modal替换掉,所以modal内写内容也没啥意义-->
+		<modal>123456</modal>
+	</div>
+	<template id="modal">
+		// 模板中只能有一个根元素
+		<div>我是自定义组件的内容啊
+			<ul>
+				<li>苹果</li>
+				<li>香蕉</li>
+				<li>西瓜</li>
+			</ul>
+		</div>
+	</template>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vue_data=new Vue({
+		el:'#app',
+		components:{
+			modal:{
+				template:'#modal'
+			}
+		},
+		data:{}
+	});
+</script>
+</html>

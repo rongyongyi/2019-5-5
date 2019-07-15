@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>样式 :style</title>
+</head>
+<body>
+	<div id="app">
+		<div class="class1" :style=[style1]>锄禾日当午</div>
+		<div class="class2" :style={background:'blue'}>汗滴禾下土</div>
+		<div class="class3" :style=[style2,style3,{color:'green'}]>谁知盘中餐</div>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vm=new Vue({
+		el:"#app",
+		data:{
+			style1:{background:'red'},
+			style2:{background:'pink'},
+			style3:{fintSize:'25px'},
+		}
+	});
+</script>
+</html>

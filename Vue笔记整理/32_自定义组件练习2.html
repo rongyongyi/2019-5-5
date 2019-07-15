@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义组件练习2</title>
+</head>
+<body>
+	<div id="app">
+		<!-- 自定义组件  template会把整个 modal替换掉-->
+		<modal>123456</modal>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vue_data=new Vue({
+		el:'#app',
+		components:{
+			modal:{
+				// 模板中只能有一个根元素
+				template:'<div>我是自定义组件</div>'
+			}
+		},
+		data:{}
+	});
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue对象的返回值之数组</title>
+</head>
+<body>
+    <div id="one">{{test}}</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vue_data = new Vue({
+        el:"#one",
+        data:{
+            test:[0,1,2,3,4,5]
+        }
+    });
+    // 可以通过索引 获取到数组的值
+    console.log(vue_data.test[0]); // 0
+    console.log(vue_data.test[1]); // 1
+
+    // 不能直接通过索引改变某一项
+    vue_data.test[0] = 300; // ×
+    // 使用 $set() 方法，可以成功修改
+    vue_data.$set(vue_data.test,"0",300); // √
+
+    // 当然也不能直接修改 length
+    vue_data.test.length--; // ×
+    // 使用$set()方法修改length --> 成功
+    vue_data.$set(vue_data.test,"length",5); // √ 
+</script>
+</html>
+<style scoped>
+/* 用于当下的模块，很好的实现了样式私有化的目的，这是一个非常好的机制*/
+</style>

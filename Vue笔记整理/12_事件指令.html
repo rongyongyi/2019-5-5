@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>事件指令</title>
+</head>
+<body>
+    <div id="parent">
+        <div
+            id="one"
+            style="width:100px;height:100px;background:red;"
+            type="text"
+            v-on:click="add"
+        >
+        <!-- v-on：事件状态[事件修饰符] = "回调函数" -->
+        <!-- @事件状态[事件修饰符] = "回调函数" -->
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    /**
+     * 事件修饰符
+     * .prevent ：阻止事件的默认行为
+     * .stop：阻止事件的冒泡传播
+     * .capture：事件行为在捕获阶段执行
+     * .once：只执行一次
+     * .self：只有触发自己的事件行为才会执行
+     * 
+     * 键盘事件的修饰符：修饰键盘事件的
+     * .enter：回车
+     * .esc：退出
+     * .delete：退格
+     * .space：空格
+     * .tab：tab键
+     * .left
+     * .up：向上
+     * .right
+     * .down：向下
+     * 
+     * 回调函数没有括号，第一个参数默认接收事件对象；
+     * 如果有括号，并且需要事件对象，需要给函数括号中传一个$event
+    */
+   let vue_data = new Vue({
+       el:"#parent",
+       data:{
+           msg:"内容信息"
+       },
+       methods:{
+           add(){
+               console.log("点击事件");
+           }
+       }
+   });
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义组件的嵌套</title>
+</head>
+<body>
+	<div id="app">
+		<parent>
+			<son>
+				<children></children>
+			</son>
+		</parent>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	//如果要在组件中使用另一个组件，要先在自己内部注册另一个组件
+	let children={
+		template:'<div>孙子</div>'
+	};
+	let son={
+		template:'<div>儿子<children></children></div>',
+		components:{
+			children
+		}
+	};
+	let parent={
+		template:'<div>父亲<son></son></div>',
+		components:{
+			son
+		}
+	};
+	//注册
+	let vue_data=new Vue({
+		el:"#app",
+		
+		components:{
+			parent
+		}
+	});
+</script>
+</html>

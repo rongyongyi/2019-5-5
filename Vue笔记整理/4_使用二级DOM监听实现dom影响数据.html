@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用二级DOm监听实现dom影响数据</title>
+</head>
+<body>
+    <input type="text" id="one">
+</body>
+<script type="text/javascript">
+    let obj = {name:"张三"};
+    let temp = {};
+    one.value = obj.name; // 设置input默认值
+    Object.defineProperty(obj,"name",{
+        get(){
+            console.log("获取obj.name,回调了get方法...");
+        },
+        set(attrValue){
+            console.log("设置obj.name,回调了set方法");
+            console.log("sttrValue --> "+attrValue);
+            
+        }
+    });
+    /** 
+     * 设置input默认值
+     * 放到下面的话，因为get没有设置返回值，所以回调get方法的时候，将obj.name值改为了undefined
+     * one.value = obj.name
+     */
+
+     // 实现DOM --> 数据
+     one.addEventListener("input",function(){
+        let newValue = one.value; // 获取到input中新的值
+        obj.name = newValue; // 设置到obj对象的属性值，这里会回调set方法
+     });
+</script>
+</html>

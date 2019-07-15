@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插槽</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 自定义组件  template会把整个 modal替换掉-->
+        <modal>
+            <!-- template 中的插槽,会把这里面的内容全部记录下来,然后添加到根元素中,最后替换掉 modal -->
+            <ul slot="title">
+                <li>假如生活欺骗了你</li>
+                <li>不要悲伤,不要心急</li>
+                <li>忧虑的日子里需要镇静</li>
+                <li>相信吧,快乐的日子将会来临</li>
+            </ul>
+            <ul >
+                <li>白日依山尽</li>
+                <li>黄河入海流</li>
+                <li>欲穷千里目</li>
+                <li>更上一层楼</li>
+            </ul>
+            <ul slot="content">
+            	<li>大海啊,全是水</li>
+            	<li>奔马啊,六条腿</li>
+            	<li>吟诗吧</li>
+            </ul>
+        </modal>
+    </div>
+    <template id="modal">
+        <div>
+            <!-- slot有个默认的name=default  默认,存放到这个slot里面 -->
+            <slot name="default">
+            </slot>
+            <slot name="title"></slot>
+            <slot name="content"></slot>
+        </div>
+    </template>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vue_data = new Vue({
+        el: '#app',
+        components: {
+            modal: {
+            	template:"#modal"
+            }
+        },
+        data: {}
+    });
+</script>
+</html>

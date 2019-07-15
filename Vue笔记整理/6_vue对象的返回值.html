@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue对象的返回值</title>
+</head>
+<body>
+    <div id="one"></div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //vue_data是Vue对象的返回值，存储了Vue对象中data保存的值
+    let vue_data = new Vue({
+        el:"#one",
+        data:{
+            a:{
+                a:1,
+                b:2,
+                c:3
+            }
+        }
+    });
+    console.log(vue_data.a); // Object
+</script>
+</html>

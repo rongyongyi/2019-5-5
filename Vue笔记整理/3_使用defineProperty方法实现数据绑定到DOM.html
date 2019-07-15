@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用defineProperty方法实现数据绑定到DOM</title>
+</head>
+<body>
+    <input type="text" id="one">
+</body>
+<script type="text/javascript">
+    let obj = {name:"张三"}; // 模拟的vue对象
+    let one = document.getElementById("one"); // 获取到DOM元素对象
+    one.value = obj.name; // 设置value值 这里获取了obj.name会回调 Object.definedProperty中的get方法
+    let temp = {};
+    Object.defineProperty(obj,"name",{
+        get(){
+            return temp.name;
+            
+        },
+        set(attrValue){
+            temp.name = attrValue; // 设置temp.name
+            let one = document.getElementById("one"); // 获取到DOM元素对象
+            one.value = attrValue; // 在每次绑定对象的属性值改变的时候，都会回调set，这时，改变DOM中的值
+        }
+        
+    });
+    // console.log(temp)
+</script>
+</html>
