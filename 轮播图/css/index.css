@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+#outer{
+    width:800px;
+    height:300px;
+    margin:50px auto;
+    position: relative;
+    overflow: hidden;
+}
+#outer #swiper{
+    position: absolute;
+    left:0px;
+    width:4000px;
+    height:300px;
+    overflow: hidden;
+}
+#outer #swiper div{
+    width:800px;
+    height:300px;
+    float: left;
+}
+#outer #swiper div img{
+    width:100%;
+    height:100%;
+}
+#outer #focus{
+    position: absolute;
+    bottom:10px;
+    width:120px;
+    height:25px;
+    left:50%;
+    margin-left: -60px;
+}
+#outer #focus li{
+    width: 25px;
+    height:25px;
+    background: green;
+    border-radius: 50%;
+    margin-right: 5px;
+    float: left;
+}
+#outer #focus li.select{
+    background: red;
+}
+#outer a{
+    display: inline-block;
+    width:20px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    background: rgba(0,0,0,0.3);
+    color:white;
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    margin-top: -25px;
+    text-decoration: none;
+}
+#left{
+    left:0;
+}
+#right{
+    right:0;
+}

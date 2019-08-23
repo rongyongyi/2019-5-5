@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head><select name="" id="" disabled="disabled"></select>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>找不到vue对象的返回值</title>
+</head>
+<body>
+    <!-- 注意：小胡子语法里不能使用vue的返回值 -->
+    <div id="one">{{a.b}}</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    // vue_date是Vue对象的返回值，存储了Vue对象中data保存的值
+    let vue_data = new Vue({
+        el:"#one",
+        data:{
+            a:{
+				a:1,
+				b:2,
+				c:3,
+			}
+        }
+    });
+</script>
+</html>

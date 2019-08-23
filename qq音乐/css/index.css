@@ -1,0 +1,144 @@
+html{
+    font-size: 100px;
+}
+html,body{
+    height:100%;
+}
+.container{
+    height:100%;
+    position: relative;
+    width:100%;
+}
+.container .imgBg,.container .bg{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -2;
+}
+.container .imgBg{
+    background: url("../img/myDream.jpg") no-repeat;
+    background-size:cover;
+    filter: blur(7px);
+}
+.container .bg{
+    background: rgba(0,0,0,0.2);
+}
+.header{
+    padding:0.3rem;
+    background:rgba(0,0,0,0.3);
+    position: relative;
+}
+.header .content img{
+    width:1.2rem;
+    height:1.2rem;
+}
+.header .content h3{
+    display: inline-block;
+    vertical-align: top;
+}
+.header .content h3 span{
+    color:white;
+    display: block;
+    height:0.6rem;
+    line-height: 0.6rem;
+}
+.header .content h3 span:nth-child(1){
+    font-size: 0.45rem;
+}
+.header  #musicBtn{
+    position: absolute;
+    display: block;
+    width:.6rem;
+    height:0.6rem;
+    right:0.3rem;
+    background: url("../img/music.svg") no-repeat;
+    background-size:100% 100%;
+    top:50%;
+    margin-top: -0.3rem;
+}
+.header  #musicBtn.select{
+    animation: move 2s  linear 0s infinite;
+}
+@keyframes move {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.main{
+    padding:0.3rem;
+    width:100%;
+    height:7rem;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.main .wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    transition:all 0.3s linear;
+}
+.main .wrapper p{
+    height:0.84rem;
+    line-height: 0.84rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color:rgba(255,255,255,0.6);
+    letter-spacing: 0.04rem;
+}
+.main .wrapper p.select{
+    color:#31C27C;
+}
+.footer{
+    width:100%;
+    position: relative;
+}
+.footer .progress{
+    margin-top: 0.6rem;
+    position: relative;
+    width:100%;
+    height:1rem;
+    overflow: hidden;
+}
+.footer .progress .line{
+    width:65%;
+    height:0.04rem;
+    background: rgba(255,255,255,0.3);
+    margin:0.15rem auto;
+}
+.footer .progress .lineBg{
+    width:0;
+    height:0.04rem;
+    background:#31C27C;
+}
+.footer .progress span{
+    position: absolute;
+    color:white;
+}
+.footer .progress span:nth-child(1){
+    left:0.4rem;
+}
+.footer .progress span:nth-child(2){
+    right:0.4rem;
+}
+.footer #down{
+    display: block;
+    margin: auto;
+    text-align: center;
+    line-height: 1rem;
+    font-size: 0.4rem;
+    width:60%;
+    height:1rem;
+    border-radius: 0.5rem;
+    background: url(../img/sprite_play.png) .2rem -5.86rem no-repeat #31C27C ;
+    color:white;
+    background-size: 0.8rem 7rem;
+}
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>局部组件</title>
+</head>
+<body>
+	<div id="app">
+		<mytest></mytest>
+		<aaa></aaa>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	// 第一步创建组件
+	let obj ={school:"北京你好啊"};
+	let mytest={
+		// 会报错，msg未定义。在vue中，vue的实例也是一个组件，组件之间是相互独立的，不能跨组件调用数据
+		// template:'<div>组件1{{msg}}</div>',
+		template:'<div>组件1{{school}}</div>',
+		data(){
+			return obj;
+		}
+	};
+	let aaa={
+		template:'<div>组件2</div>',
+	};
+
+	// 第二步注册组件
+	let vm=new Vue({
+		el:"#app",
+		components:{
+			mytest,
+			aaa,
+		},
+		data:{
+			msg:"测试数据",
+		}
+	});
+</script>
+</html>

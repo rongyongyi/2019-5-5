@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>插槽</title>
+</head>
+<body>
+	<div id="app">
+		<!-- 自定义组件  template会把整个 modal替换掉-->
+		<modal>
+			<!-- template 中的插槽,会把这里面的内容全部记录下来,然后添加到根元素中,最后替换掉 modal -->
+			<ul>
+				<li>假如生活欺骗了你</li>
+				<li>不要悲伤,不要心急</li>
+				<li>忧虑的日子里需要镇静</li>
+				<li>相信吧,快乐的日子将会来临</li>
+			</ul>
+		</modal>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vue_data=new Vue({
+		el:'#app',
+		components:{
+			modal:{
+				// 模板中只能有一个根元素
+				template:'<div><slot name="default">这是默认内容,如果获取不到自定义组件的内容,则显示这里的默认内容</slot></div>'
+			}
+		},
+		data:{}
+	});
+</script>
+</html>

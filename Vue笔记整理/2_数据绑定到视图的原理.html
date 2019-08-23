@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据 --> 视图绑定的原理</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    let obj = {name:"张三"};
+    /**
+     * Object.defineProperty方法 不支持IE8及以下浏览器，所以Vue不支持IE8及以下浏览器
+     * 1、第一个参数为要绑定的对象
+     * 2、第二个参数为绑定对象的属性
+     * 3、第三个参数，对象里声明了两个回调方法
+     *      get方法：当获取属性值的时候会回调，return 的值为获取的绑定对象的属性值
+     *      set方法：当设置属性值的时候会回调，参数attrValue为绑定对象的属性设置的属性值
+     * 这里以 obj 对象，以obj的name属性为例子
+     */
+    Object.defineProperty(obj,"name",{
+        get(){
+            console.log("获取属性值回调此方法...");
+            return 100;
+        },
+        set(attrValue){
+            console.log("obj属性值改变回调的方法...");
+            console.log("attrValue --> "+attrValue);
+        }
+    });
+    console.log(obj.name);
+    
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第一次使用及小胡子语法</title>
+</head>
+<body>
+    <!-- 如果要处理多个DOM，可以是VUE对象绑定父级元素，这个父级元素及子孙级别元素都会按照VUE处理 -->
+    <div id="parent">
+        <!--  小胡子语法 {{ 定义的变量|支持的表达式}} -->
+        <!--  小胡子语法使用vue中的数据，直接添加数据声明的变量即可 -->
+        <div id="one">{{1+2}}{{once}}</div>
+        <div id="tow">{{1+2}}</div>
+        <div id="three">{{3>5?"3真的大于5啦":"3其实小于5"}}</div>
+    </div>
+</body>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+        el:"#parent", // el 元素选择器
+        data:{
+            once:"Hello Vue" // 自定义的变量名
+        }
+    });
+</script>
+</html>

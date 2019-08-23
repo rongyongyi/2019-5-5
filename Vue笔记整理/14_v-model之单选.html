@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-model单选</title>
+</head>
+<body>
+	<div id="app">
+		<!-- 
+			在单选 radio中， v-model都设置为一个变量则为一组
+			这个变量即实时选中的值
+		 -->
+		<input type="radio" v-model="flag" value="男">男
+		<input type="radio" v-model="flag" value="女">女
+		<input type="radio" v-model="flag" value="其他">其他
+		<div>{{"选中的是"+flag}}</div>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vue_data=new Vue({
+		el:"#app",
+		data:{
+			flag:"其他",
+		}
+	});
+</script>
+</html>

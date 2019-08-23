@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>computed练习</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="a">{{msg}}
+    </div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vm=new Vue({
+		el:"#app",
+		computed:{
+			msg(){
+				if(this.a.length<3){
+					return "太短";
+				}
+				if(this.a.length>6){
+					return "长了";
+				}
+				return '';
+			},
+			//默认调用 get方法
+			get(){
+				console.log("调用了get···");
+			}
+		},
+		data:{
+			a:'',
+		}
+	});
+</script>
+</html> 
