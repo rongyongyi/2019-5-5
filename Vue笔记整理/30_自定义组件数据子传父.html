@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义组件数据之子传父</title>
+</head>
+<body>
+	<!-- 子传父的原理：
+		1）父亲绑定一些事件，儿子触发这个事件，将参数传递过去 
+		2）单向数据流，父亲数据刷新，儿子就刷新
+	-->
+	<div id="app">
+		父亲：{{money}}
+		<!-- child.$on('child-msg',things) 绑定 child-msg事件 -->
+		<child :m="money" @child-msg='things'></child>
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">		
+	let vm=new Vue({
+		el:"#app",
+		data:{
+			money:400
+		},
+		methods:{
+			things(val){
+				alert(val);
+				this.money=val;
+			}
+		},
+		//声明并注册了 child组件
+		components:{
+			child:{
+				props:['m'],
+				
+				methods:{
+					getMoney(){
+						//触发了 child-msg  事件，并传值  800
+						this.$emit('child-msg',800);
+					}
+				},
+				template:'<div>儿子{{m}} <button @click="getMoney()">多要钱</button></div>',
+
+			}
+		}
+	});
+</script>
+</html>

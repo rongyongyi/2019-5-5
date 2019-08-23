@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>常用指令</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-text 用法 -->
+        <div v-text="text1"></div>
+        <div>{{message}}</div>
+        <div v-text="text2"></div>
+        <div>{{text3}}</div>
+
+        <!-- v-html 可以识别标签 -->
+        <div v-html="content"></div>
+
+        <!-- v-if v-else v-else-if 条件成立才会渲染这个DOM -->
+        <div v-if="ifvalue=3">是3</div>
+        <div v-else="ifvalue">不是3</div>
+
+        <!-- v-show 控制元素的显示和隐藏，相当于display属性 -->
+        <div v-show="show1">v-show控制的显示隐藏1</div>
+        <div v-show="show2">v-show控制的显示隐藏2</div>
+
+        <!-- v-bind 绑定动态的属性。可以简写成冒号： -->
+        <div v-bind:title="title"></div>
+        <div :id="vid"></div>
+        <div :class="vclass"></div>
+
+        <!-- v-for -->
+        <li v-for="item in arr">{{item}}</li>
+        <li v-for="(item,index) in arr1">{{item}}{{"-->"}}{{index}}{{"--->"}}{{arr1[index]}}</li>
+    
+        <!-- v-once -->
+        <div v-text="msg1"></div>
+        <div v-once v-text="msg2"></div>
+    </div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    /**
+     * vue中的常见的指令：
+     * v-model  v-text v-html v-if v-else-if v-show v-bind v-for v-once 等
+     * 我们在最外层的父元素绑定vue，然后内部的子孙DOM元素，都用vue指令处理
+    */
+   let vue_data = new Vue({
+       el:"#app",
+       data:{
+           text1:"text文本",
+           message:"信息",
+           text2:3>5?"3大于5啊":"3真的小于5",
+           text3:1+6,
+           content:"<h1>我是大标题</h1>",
+           ifvalue:3,
+           show1:true,
+           show2:false,
+           title:"标题",
+           vid:"div1",
+           vclass:"class1,class2",
+           arr:[1,2,3],
+           arr1:["苹果","香蕉","西瓜"],
+           msg1:"没有添加v-once",
+           msg2:"v-once的信息"
+       }
+   });
+   vue_data.$set(vue_data,"msg1","v-once改变的信息111");
+   vue_data.$set(vue_data,"msg2","v-once改变的信息222");
+</script>
+</html>

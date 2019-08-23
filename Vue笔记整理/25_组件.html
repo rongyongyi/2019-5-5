@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全局组件</title>
+</head>
+<body>
+	<!-- 组件的分类
+
+	1） 一个页面就是一个组件
+	2） 将可复用的部分抽离出来，基础组件
+    -->
+
+    <!-- 组件的优势：
+	1）  提高开发效率
+	2）  方便重复使用
+	3）  便于协同开发
+	4）  更容易被管理和维护
+     -->
+
+     <!-- vue中的组件
+	在vue中，一个自定义标签，vue就饿可以看成一个组件
+      -->
+
+      <!-- vue中组件的分类：
+      1）全局组件：声明一次，任何地方使用
+      /**
+       *  注意，自定义的组建名除了首字母不能用大写字母，多个单词用 -  分隔 
+       *   My-hand-some  推荐这种写法，首字母可大写可小写，其余都是小写字母， -分隔
+       *  myHandSome  这样的驼峰命名也是可以的，但是不推荐 
+      Vue.component("自定义组件名",{
+		   template:'<div>我很英俊</div>'
+      });
+
+      2）局部组件：必须告诉这个组件属于谁
+
+       -->
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+</html>

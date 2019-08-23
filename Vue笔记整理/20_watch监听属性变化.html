@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>watch--监听属性</title>
+</head>
+<body>
+	<div id="app">
+        <input type="text" v-model="a">{{msg}}
+    </div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+	let vm=new Vue({
+		el:"#app",
+		watch:{
+			//监控属性的新值和旧值
+			a(newVal,oldVal){
+				if(newVal.length<3){
+					this.msg="太短"
+				}
+				if(newVal.length>6){
+					this.msg="太长"
+				}
+			}
+		},
+		data:{
+			a:'',
+			msg:'',
+		}
+	});
+</script>
+</html>

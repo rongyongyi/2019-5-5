@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 第四题
+        // var a = 0;
+        // var b = a;
+        // b++;
+        // alert(a) // a=0
+        // var o = {};
+        // o.a = 0;
+        // var b = o;
+        // b.a = 10;
+        // alert(o.a)// o.a = 10
+
+
+        // 第五题
+        // alert(1) // 输出1 不解释
+        // console.log(parseInt(1.3))// 输出1 parseInt返回整数 所以也是1
+        // console.log(1)// 输出1 不解释
+        // console.log(isNaN(1)) // false 1不是NaN 所以是false
+        // console.log(parseInt("1"))// 输出1  parseInt方法是先把数据转换成数字格式再计算
+
+        // parseInt 返回由字符串转换的到的整数，有两参数parseInt(numString, [radix])
+        // 第一个参数为必填项：要转化成数字的字符串
+        // 第二个参数是可选项：在 2 和 36 之间的表示 numString 所保存数字的进制的值。
+
+        // 第六题
+        // console.log(alert(1)) // 先alert1 再console-undefined
+        // typeof undefined
+        // console.log(parseInt(undefined)) // undefined
+        // isNaN(undefined) // NaN
+
+
+        // for (var i = 0; i < 10; i++) {
+        //     console.log(i); // 0 
+        //     // break;
+        // }
+        // console.log(i); // 0
+
+
+        // 疑问！！！！
+        // for (var i = 1; i <= 10; i += 2) {
+        //     if (i <= 5) {
+        //         i++;
+        //         continue;// 结束本次循环
+        //     } else {
+        //         i -= 2;
+        //         break; // 跳出循环
+        //     }
+        //     i--;
+        //     console.log(i); // 不执行
+        // }
+        // console.log(i); // 输出5
+
+
+        // 死循环
+        // for (var i = 3; i < 12; i++) {
+        //     if (i < 3) {
+        //         i++;
+        //         break;
+        //     }
+        //     if (i > 9) {
+        //         i += 2;
+        //         continue;
+        //     }
+        //     i--;
+        // }
+        // console.log(i);
+
+
+        
+        // let a = typeof typeof typeof [12, 23];
+        // console.log(a); // typeof是用来检测变量类型的，返回字符串格式的undefined，number，string，object，boolean等，
+    </script>
+</body>
+
+</html>

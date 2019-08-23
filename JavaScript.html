@@ -1,0 +1,3361 @@
+<!DOCTYPE html><html><head><title>JavaScript</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<div><div class="toc"><div class="toc">
+<ul>
+<li><a href="#javascript">JavaScript</a><ul>
+<li><ul>
+<li><a href="#js组成">js组成</a></li>
+<li><a href="#js的使用">js的使用</a><ul>
+<li><a href="#代码注释">代码注释</a></li>
+<li><a href="#获取id类名标签">获取ID、类名、标签</a></li>
+<li><a href="#操作属性">操作属性</a></li>
+<li><a href="#变量let-var">变量(let var):</a></li>
+<li><a href="#常量const">常量(const)</a></li>
+<li><a href="#点的用法">点的用法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#数据类型ecmascript">数据类型:ECMAScript</a><ul>
+<li><a href="#基本数据类型">基本数据类型</a><ul>
+<li><ul>
+<li><a href="#string-字符串">string 字符串</a></li>
+</ul>
+</li>
+<li><a href="#number-数字">number 数字</a><ul>
+<li><a href="#运算符">运算符</a></li>
+<li><a href="#逻辑运算符">逻辑运算符:</a></li>
+</ul>
+</li>
+<li><a href="#布尔类型boolean为了判断验证">布尔类型Boolean(为了判断、验证)</a></li>
+<li><a href="#null和undefined">null和undefined</a></li>
+<li><a href="#windowonload">window.onload:</a></li>
+</ul>
+</li>
+<li><a href="#引用数据类型">引用数据类型</a><ul>
+<li><ul>
+<li><ul>
+<li><a href="#引用类型复杂类型复合类型">（引用类型、复杂类型、复合类型）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#普通对象">普通对象</a><ul>
+<li><a href="#typeof-检测数据类型">typeof 检测数据类型</a></li>
+<li><a href="#判断数组的函数">判断数组的函数:</a></li>
+</ul>
+</li>
+<li><a href="#循环">循环</a><ul>
+<li><a href="#for循环">for循环</a></li>
+<li><a href="#循环中的跳过跳出">循环中的跳过、跳出</a></li>
+<li><a href="#while循环一般不知道要循环多少次才用">while循环:一般不知道要循环多少次才用</a></li>
+<li><a href="#for-in对象使用for-in枚举对象的属性来达到循环目的">for in:对象使用for in枚举对象的属性来达到循环目的</a></li>
+</ul>
+</li>
+<li><a href="#函数function">函数Function:</a></li>
+<li><a href="#函数与方法的区分">函数与方法的区分</a></li>
+<li><a href="#匿名函数">匿名函数()</a></li>
+<li><a href="#前自增后自增">前自增后自增</a></li>
+<li><a href="#判断">判断</a></li>
+</ul>
+</li>
+<li><a href="#自定义属性">自定义属性</a><ul>
+<li><a href="#属性的操作">属性的操作</a></li>
+</ul>
+</li>
+<li><a href="#数组方法">数组方法</a><ul>
+<li><a href="#1push">1、push:</a></li>
+<li><a href="#2pop传参都是唬人的">2、pop(传参都是唬人的)</a></li>
+<li><a href="#3unshift">3、unshift:</a></li>
+<li><a href="#4shift">4、shift:</a></li>
+<li><a href="#5splice">5、splice:</a></li>
+<li><a href="#6foreach专门用来循环数组的">6、forEach:专门用来循环数组的。</a></li>
+<li><a href="#7map">7、map:</a></li>
+<li><a href="#8join">8、join():</a></li>
+<li><a href="#9filter过滤条件成立的值">9、filter：过滤条件成立的值</a></li>
+<li><a href="#10reverse翻转数组">10、reverse：翻转数组</a></li>
+<li><a href="#11some">11、some:</a></li>
+<li><a href="#12every">12、every:</a></li>
+<li><a href="#13sort-排序">13、sort 排序</a></li>
+<li><a href="#14concat">14、concat()</a></li>
+<li><a href="#15数组截取">15、数组截取</a></li>
+</ul>
+</li>
+<li><a href="#字符串方法">字符串方法</a><ul>
+<li><a href="#1split">1、split(”):</a></li>
+<li><a href="#2截取类substring00substr00">2、截取类:substring(0,0)、substr(0,0)</a></li>
+<li><a href="#3indexof指定字符从哪位开始">3、indexOf(指定字符,从哪位开始)</a></li>
+<li><a href="#4includes-包含字符串中是否包含指定字符包含就返回true否则false">4、includes 包含，字符串中是否包含指定字符，包含就返回true，否则false</a></li>
+<li><a href="#5touppercase-把小写英文转成大写英文">5、toUpperCase  把小写英文转成大写英文</a></li>
+<li><a href="#6tolowercase-把大写英文转成小写英文">6、toLowerCase  把大写英文转成小写英文</a></li>
+<li><a href="#7trim-去掉前后空格">7、trim  去掉前后空格</a></li>
+<li><a href="#8replace-替换">8、replace 替换</a></li>
+</ul>
+</li>
+<li><a href="#时间对象">时间对象</a><ul>
+<li><ul>
+<li><a href="#获取出来的都是数字类型">获取出来的都是数字类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#定时器">定时器</a></li>
+<li><a href="#倒计时">倒计时</a><ul>
+<li><ul>
+<li><a href="#计算时间公式">计算时间公式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#递归函数自己调用自己">递归：函数自己调用自己</a></li>
+<li><a href="#domdocument-object-model-文档对象模型">DOM：Document  Object  Model 文档对象模型</a></li>
+<li><a href="#节点整个html中全是节点">节点：整个html中全是节点</a><ul>
+<li><a href="#1属性nodetype-值是一个数字">1、属性：nodeType -&gt;值是一个数字</a></li>
+<li><a href="#2childnodes-子节点">2、childNodes  子节点</a></li>
+<li><a href="#3children-子级元素节点不是标准但是所有浏览器都支持">3、children  子级元素节点，不是标准，但是所有浏览器都支持</a></li>
+<li><a href="#4nodevalue-查看节点内容">4、nodeValue  查看节点内容</a></li>
+<li><a href="#5attributes-属性返回指定节点的属性集合即-namednodemap">5、attributes 属性返回指定节点的属性集合，即 NamedNodeMap。</a></li>
+<li><a href="#6创建一个元素节点">6、创建一个元素节点</a></li>
+<li><a href="#7添加元素">7、添加元素</a></li>
+<li><a href="#8删除parentremovechild哪个元素">8、删除:parent.removeChild(哪个元素)</a></li>
+<li><a href="#9clonenodetrue-克隆元素">9、cloneNode(true) 克隆元素</a></li>
+</ul>
+</li>
+<li><a href="#math">Math</a></li>
+<li><a href="#作用域">作用域</a><ul>
+<li><a href="#1全局作用域">1.全局作用域</a></li>
+<li><a href="#2私有作用域">2.私有作用域</a></li>
+<li><a href="#3块级作用域">3.块级作用域</a></li>
+<li><a href="#4作用域链">4.作用域链</a></li>
+</ul>
+</li>
+<li><a href="#箭头函数">箭头函数</a><ul>
+<li><ul>
+<li><a href="#arguments-实参的集合">arguments 实参的集合</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#闭包">闭包</a></li>
+</ul>
+</li>
+<li><a href="#git是个版本控制工具">git：是个版本控制工具</a><ul>
+<li><ul>
+<li><a href="#git-与-github进行关联">git 与 github进行关联</a></li>
+<li><a href="#git版本控制工具新建控制项目">git:版本控制工具–新建控制项目:</a><ul>
+<li><a href="#工作区到存储区">工作区到存储区:</a></li>
+<li><a href="#暂存区到版本区">暂存区到版本区:</a></li>
+<li><a href="#快速从工作区提交到版本区">快速从工作区提交到版本区</a></li>
+<li><a href="#工作区查看暂存区">工作区查看暂存区:</a></li>
+<li><a href="#暂存区查看版本区">暂存区查看版本区:</a></li>
+<li><a href="#工作区查看版本区">工作区查看版本区:</a></li>
+<li><a href="#查看版本">查看版本:</a></li>
+<li><a href="#如果要看操作过的版本">如果要看操作过的版本:</a></li>
+<li><a href="#还原版本">还原版本:</a></li>
+<li><a href="#永久免密上传">永久免密上传:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#单例模式">单例模式:</a><ul>
+<li><ul>
+<li><a href="#单例模式功能相对单一用来描述具体一个事务">单例模式功能相对单一,用来描述具体一个事务。</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#工厂模式">工厂模式:</a></li>
+<li><a href="#构造函数">构造函数:</a><ul>
+<li><a href="#constructor构造函数">constructor：构造函数</a></li>
+</ul>
+</li>
+<li><a href="#面向对象编程">面向对象编程:</a><ul>
+<li><a href="#原型">原型：</a></li>
+<li><a href="#原型链-proto">原型链: _proto_</a><ul>
+<li><a href="#function的三种形态">function的三种形态</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#this的指向">this的指向</a></li>
+<li><a href="#修改this指向的方法">修改this指向的方法</a></li>
+<li><a href="#包装对象">包装对象：</a></li>
+<li><a href="#自身属性">自身属性</a></li>
+<li><a href="#json方法">JSON方法</a></li>
+<li><a href="#继承">继承:</a><ul>
+<li><a href="#class继承常用">class继承–常用</a></li>
+<li><a href="#三点">三点…</a></li>
+</ul>
+</li>
+<li><a href="#正则">正则</a></li>
+<li><a href="#盒子模型">盒子模型</a><ul>
+<li><a href="#计算后的样式">计算后的样式：</a></li>
+<li><a href="#获取宽高">获取宽高：</a></li>
+<li><a href="#距离">距离</a></li>
+<li><a href="#绝对位置当前元素到页面顶端的位置">绝对位置：当前元素到页面顶端的位置。</a></li>
+</ul>
+</li>
+<li><a href="#bombrowser-object-model-浏览器对象模型">BOM:Browser Object Model  浏览器对象模型</a><ul>
+<li><a href="#浏览器地址信息">浏览器地址信息</a></li>
+<li><a href="#延迟加载">延迟加载</a></li>
+<li><a href="#替换图片">替换图片</a></li>
+</ul>
+</li>
+<li><a href="#修改class">修改class</a></li>
+<li><a href="#运动函数-tween">运动函数   Tween</a><ul>
+<li><a href="#速度版运动">速度版运动</a></li>
+<li><a href="#时间版运动">时间版运动</a><ul>
+<li><a href="#动画帧">动画帧:</a></li>
+</ul>
+</li>
+<li><a href="#回调函数">回调函数</a></li>
+</ul>
+</li>
+<li><a href="#事件">事件</a><ul>
+<li><a href="#事件模型">事件模型</a></li>
+<li><a href="#冒泡的坏处阻止冒泡">冒泡的坏处–阻止冒泡</a></li>
+<li><a href="#冒泡的好处事件委托">冒泡的好处–事件委托</a></li>
+<li><a href="#没有冒泡的也可以阻止穿透">没有冒泡的，也可以阻止穿透</a></li>
+<li><a href="#坐标值">坐标值</a></li>
+<li><a href="#键盘事件">键盘事件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h1 id="javascript">JavaScript</h1>
+
+<ul><li><p>单线程</p></li>
+<li><p>PC、H5、混合开发(Hybrid)、Node  <br>
+性价比超级高</p></li>
+</ul>
+
+
+
+<h3 id="js组成">js组成</h3>
+
+<ul><li><p>javascript  编程语言</p>
+
+<ul>
+<li><p>ECMAScript  标准（语法、规则）</p></li>
+<li><p>DOM (Doument Object Model)  文档对象模型</p></li>
+<li><p>BOM (Browser Object Model) 浏览器对象模型</p>
+
+<blockquote>
+  <p>Vue，React，jQuery，angular</p>
+</blockquote></li></ul></li>
+</ul>
+
+<p><code>推荐书籍  <br>
+JavaScript权威指南  <br>
+JavaScript高级程序设计  <br>
+DOM编程艺术  <br>
+JavaScript性能优化  <br>
+JavaScript数据结构与算法  <br>
+nodeJS深入浅出  <br>
+了不起的nodejs  <br>
+http://es6.ruanyifeng.com/ ES6</code></p>
+
+
+
+<h3 id="js的使用">js的使用</h3>
+
+<ul><li><p>1.行内 <br>
+ <code>&lt;div onclick="alert(1)"&gt;&lt;/div&gt;</code></p></li>
+<li><p>2.内嵌</p>
+
+<ul>
+<li><p>把script标签放在body结束标签的上方</p></li></ul></li>
+<li><p>3.外链 <br>
+<code>&lt;script src="js的路径"&gt;&lt;/script&gt;</code>  </p>
+
+<blockquote>
+  <p>注意:如果加了src，script中不能执行js了。   </p>
+</blockquote></li>
+</ul>
+
+
+
+<h4 id="代码注释">代码注释</h4>
+
+<ul><li><p>//输出一个js代码   //注释一行代码</p></li>
+<li><p>/**/ 多行代码注释    </p></li>
+</ul>
+
+
+
+<h4 id="获取id类名标签">获取ID、类名、标签</h4>
+
+<ul><li><p>document.getElementById(‘字符串’);</p></li>
+<li><p>document.getElementsByTagName(‘标签名’) *获取一组元素</p></li>
+<li><p>document.querySelector(”) 能够获取一个元素，就算是获取一组，也只能获取到一组中的第一个。</p></li>
+<li><p>document.querySelectorAll() 能够获取一组元素</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> oDiv1 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'oDiv'</span>);
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> oDiv2 = <span class="hljs-built_in">document</span>.getElementsByClassName(<span class="hljs-string">'qqq'</span>)[<span class="hljs-number">0</span>];<span class="hljs-comment">//通过类名获取元素，我们得到的是一个集合，想要获取某个元素 需要用对应的索引来获取，索引都是从0开始的</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> oDiv3 = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">'div'</span>);<span class="hljs-comment">//通过标签名获取元素，得到的结果跟通过类名得到的结果一致</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(oDiv1, oDiv2, oDiv3[<span class="hljs-number">0</span>]);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> str = oDiv2.innerHTML;
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> str1 = oDiv2.innerText;
+</div><div class="hljs-line">        <span class="hljs-comment">// innerHTML 可以识别html结构； innerText 不能识别html结构</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// oDiv2.innerHTML = '&lt;h1&gt;珠峰&lt;/h1&gt;';</span>
+</div><div class="hljs-line">        oDiv2.innerText = <span class="hljs-string">'&lt;h1&gt;珠峰&lt;/h1&gt;'</span>;
+</div><div class="hljs-line">        <span class="hljs-comment">//str = '&lt;h1&gt;珠峰&lt;/h1&gt;';  不管用</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(str, str1);
+</div><div class="hljs-line">        oDiv2.className = <span class="hljs-string">'www'</span>;
+</div></code></pre>
+
+
+
+<h4 id="操作属性">操作属性</h4>
+
+<ul><li><p>obj.属性名</p>
+
+<ul>
+<li><p>读操作: console.log(obj.属性名)</p></li>
+<li><p>写操作: obj.属性名 = 要设置的值</p></li>
+<li><p>要操作元素的样式: </p>
+
+<ul>
+<li><p>ele.style.某个样式 = ‘值’;</p></li>
+<li><p>ele.className 操作类名</p></li></ul></li>
+<li><p>要操作元素内容:</p>
+
+<ul>
+<li><p>input的内容: value</p>
+
+<ul>
+<li><p>input.value = ‘哈哈’;</p></li></ul></li>
+<li><p>操作别的元素的内容:</p>
+
+<ul>
+<li><p>innerText  操作文本  读操作，只能获得文本</p></li>
+<li><p>innerHTML  操作结构，读操作，获取到某个元素下的所有内容（包括文本、标签）</p></li></ul></li></ul></li>
+<li><p>src</p></li>
+<li><p>href</p></li>
+<li><p><code>&lt;a href="javascript:;" id="a"&gt;1234&lt;/a&gt;</code>阻止默认跳转</p></li>
+<li><p>scr，href不要直接用来进行判断</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="变量let-var">变量(let var):</h4>
+
+<ul><li><p>let 与 var 的区别：</p>
+
+<ul>
+<li><p>1.let一个变量只能申明一次</p></li>
+<li><p>2.声明之后才能使用（有暂存死区）</p></li>
+<li><p>3.不做window映射</p></li>
+<li><p>4.支持块级作用域</p></li></ul></li>
+<li><p>可变的量，把数据存储到自定义的名字中，为了复用，只要使用这个名字，就对应到等号后面的值</p>
+
+<ul>
+<li><p>let :</p>
+
+<ul>
+<li><p>声明变量的时候名字不能重复 <br>
+不能以数字开头 <br>
+名字不能用关键字 <br>
+为了复用 <br>
+**一般变量取名字用小驼峰命名法： <br>
+开头小写，字母与字母之间的开头大写** <br>
+例：getElementById</p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="常量const">常量(const)</h4>
+
+<ul><li><p>不可变的量，把数据存储到自定义的名字中，为了复用，只要使用这个名字，就对应到等号后面的值</p>
+
+<ul>
+<li><p>const:</p>
+
+<ul>
+<li><p>声明变量的时候名字不能重复 <br>
+不能以数字开头 <br>
+名字不能用关键字 <br>
+一般在获取元素的时候会用</p></li></ul></li></ul></li>
+<li><p>console.log  打印日志 <br>
+console.dir  打印详细信息日志 <br>
+alert        调用浏览器的默认弹框</p></li>
+</ul>
+
+
+
+<h4 id="点的用法">点的用法</h4>
+
+<ul><li><p>点 从属关系 翻译成汉语 就是“的”</p></li>
+<li><p>用 点 的地方我们可以用中括号[]</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"> <span class="hljs-keyword">var</span> oDiv = <span class="hljs-built_in">document</span>[<span class="hljs-string">'getElementById'</span>](<span class="hljs-string">'oDiv'</span>);
+</div><div class="hljs-line"> <span class="hljs-keyword">debugger</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"> oDiv.style.width = <span class="hljs-string">'200px'</span>;
+</div><div class="hljs-line"> oDiv[<span class="hljs-string">'style'</span>][<span class="hljs-string">'height'</span>] = <span class="hljs-string">'200px'</span>;
+</div><div class="hljs-line"> oDiv.style.color = <span class="hljs-string">'#fff'</span>;
+</div><div class="hljs-line"> oDiv.style.backgroundColor = <span class="hljs-string">'black'</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"> <span class="hljs-keyword">var</span> tex = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'tex'</span>);
+</div><div class="hljs-line"> tex.value = <span class="hljs-string">'222'</span>;
+</div></code></pre>
+
+
+
+<h2 id="数据类型ecmascript">数据类型:ECMAScript</h2>
+
+<ul><li><p>基本数据类型：操作值，就是单纯的赋值（简单类型、原始值）</p></li>
+<li><p>引用数据类型：操作地址，就是赋址，改变A会影响B（复杂类型、引用值）</p></li>
+</ul>
+
+
+
+<h3 id="基本数据类型">基本数据类型</h3>
+
+<ul><li><p>string 字符串</p></li>
+<li><p>number 数字</p></li>
+<li><p>boolean 布尔</p></li>
+<li><p>null</p></li>
+<li><p>undefined</p></li>
+</ul>
+
+
+
+<h5 id="string-字符串">string 字符串</h5>
+
+<ul><li><p>’ ’ ” ” `` 成对显示的</p></li>
+<li><p>有长度:length(只能读不能写)</p></li>
+<li><p>获取字符串中的某个字符，使用下标  <br>
+<code>字符串的拼接:  <br>
+小技巧：  <br>
+先把设置一个默认值，然后咔咔加加  '+ +'</code></p>
+
+<blockquote>
+  <p>注意: 换行的时候使用字符串拼接</p>
+</blockquote></li>
+<li><p>反引号(字符串模板) </p>
+
+<ul>
+<li><p>语法: 反引号${放变量,放运算}反引号</p></li>
+<li><p>任何数据 + 字符串 = 字符串</p></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line">&lt;input type=<span class="hljs-string">"text"</span> id=<span class="hljs-string">"inp"</span>&gt;
+</div><div class="hljs-line">    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"btn"</span>&gt;</span>按钮<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
+</div><div class="hljs-line">    &lt;div id=<span class="hljs-string">"oDiv"</span>&gt;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">// 字符串  用单引或者双引号或者反引号包含的部分</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// 双引号不能包含双引号，单引号不能包含单引号</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// var str = "qq'q";</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// var str2 = "w\"we";//把中间的双引号转译成了双引号本身</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// var str3 = `珠\`峰`;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// var oDiv = document.getElementById('oDiv');</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//oDiv.innerHTML = '&lt;h1&gt;好的&lt;/h1&gt;';</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//oDiv.innerHTML = 'str';//给的就是字符串'str'</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//oDiv.innerHTML = str3;//给的是变量 str对应的值</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//oDiv.innerHTML = str + str3 + str2;//字符串的拼接</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">// oDiv.innerHTML = '&lt;h1&gt;' +</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     '&lt;div&gt;' +</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     '珠峰' +</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     '&lt;/div&gt;' +</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     '&lt;/h1&gt;';</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">//模板字符串</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// oDiv.innerHTML = `&lt;h1&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//         &lt;div&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//             str</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//            ${str} </span>
+</div><div class="hljs-line">        <span class="hljs-comment">//         &lt;/div&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     &lt;/h1&gt;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// `;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//反引号包含的字符串，我们想用变量时，需要使用${变量}的语法</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">//1、写法 引号(单双反)包含  有“\”代表转译</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//2、字符串拼接 一种是直接+ 若是反引号 还可以通过${}</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> btn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'btn'</span>),
+</div><div class="hljs-line">            inp = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'inp'</span>),
+</div><div class="hljs-line">            oDiv = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'oDiv'</span>);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        btn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">            oDiv.innerHTML = <span class="hljs-string">`我是<span class="hljs-subst">${inp.value}</span>;`</span>;
+</div><div class="hljs-line">            inp.value = <span class="hljs-string">''</span>;<span class="hljs-comment">//清空inp</span>
+</div><div class="hljs-line">        }
+</div><div class="hljs-line">        <span class="hljs-comment">// btn.onclick = function () {</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     // var val = inp.value;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//     oDiv.innerHTML = '我是' + inp.value;</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// }</span>
+</div></code></pre>
+
+
+
+<h4 id="number-数字">number 数字</h4>
+
+<ul><li><p>把其他数据类型转化成数字类型</p></li>
+<li><p>强制类型转换:</p>
+
+<ul>
+<li><p>把数据转成数字 :Number()</p>
+
+<ul>
+<li><p>能转长得像数字的字符串</p></li>
+<li><p>空字符串为0</p></li>
+<li><p>空白数组为0</p></li>
+<li><p>布尔值：true:1,false:0</p></li>
+<li><p>null:0</p></li>
+<li><p>别的都是NaN</p></li>
+<li><p>数字类型中 只有 0 和 NaN 转成布尔类型是false; 其他都是true</p></li></ul></li></ul></li>
+<li><p>parseInt(字符串,进制数):把字符串转成整数10进制的数字</p></li>
+<li><p>parseInt转数组时，数组中第一位长得像数字，能转第一位</p></li>
+<li><p>parseFloat(字符串):把字符串转成数字，并且保留小数</p></li>
+<li><p>NaN -&gt; not a number 只要是非法的数学运算就会出现NaN</p></li>
+<li><p>isNaN -&gt; 是NaN返回true，否则false</p>
+
+<ul>
+<li><p>isNaN(”) -&gt; Number(”) -&gt; 0 -&gt; false</p></li></ul></li>
+<li><p>toFixed：返回结果是一个字符串</p>
+
+<ul>
+<li><p>保留几位小数，会四舍五入保留位数+1的数字 <br>
+<code>比如：  <br>
+10.322 -&gt; 保留2位 -&gt; 10.32  <br>
+10.325 -&gt; 保留2位 -&gt; 10.33</code></p></li></ul></li>
+<li><p>隐式类型转换:</p>
+
+<ul>
+<li><p>数字 + 字符串 = 字符串</p></li>
+<li><p>数字 （-*除%） 字符串 = 数字</p></li></ul></li>
+</ul>
+
+
+
+<h5 id="运算符">运算符</h5>
+
+<ul><li><p>加+  _    /  *  %模</p></li>
+<li><p>! 取反</p></li>
+<li><p>== （相等）只比较值即可，不用比较数据类型，在比较的时候会进行数据转换</p></li>
+<li><p>如果数字与字符串进行比较的时候，双方转成<em>数字</em></p></li>
+<li><p>如果字符串与字符串进行比较的时候，通过unicode编码进行比较</p></li>
+<li><p>=== （全等）不但要比较值还要比较类型  性能比 == 要高 </p></li>
+<li><p>!= （不等）</p></li>
+</ul>
+
+
+
+<h5 id="逻辑运算符">逻辑运算符:</h5>
+
+<ul><li><p>&amp;&amp; 并且</p>
+
+<ul>
+<li><p>A &amp;&amp; B</p>
+
+<ul>
+<li><p>1.在if中使用 &amp;&amp; 的含义 A要成立，B也要成立</p></li>
+<li><p>2.从顺序的角度上来说，A需要成立才会找B，如果A不成立就是A</p></li></ul></li></ul></li>
+<li><p>|| 或者</p>
+
+<ul>
+<li><p>A || B</p>
+
+<ul>
+<li><p>1.在if中使用||如果A不成立那么会去找B,如果2个都不成立那么就为false</p></li>
+<li><p>2.从顺序上来来说，如果A成立就不会去B了,如果A不成立那么会去找B。</p></li></ul></li></ul></li>
+<li><p>: ? 三元(三目)</p>
+
+<ul>
+<li><p>一元 -&gt; typeof a;</p></li>
+<li><p>二元 -&gt; 1 + 1</p></li>
+<li><p>a?a:b 判断a是否成立,如果成立就走a否则走b</p>
+
+<blockquote>
+  <p>%： <br>
+  5/2余1 <br>
+  取余的技巧: <br>
+  A &gt; B  取余数 <br>
+  A &lt; B  取A <br>
+  <code>// console.log(3621%3); <br>
+  // console.log('20' &lt; 30); <br>
+  // console.log('3' &gt; '2000'); <br>
+  // console.log('3' !== 3);</code></p>
+</blockquote></li></ul></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-comment">//number 整数 小数 NaN</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n = <span class="hljs-number">1</span>;
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n2 = <span class="hljs-string">'1'</span> + <span class="hljs-number">2</span>;<span class="hljs-comment">//字符串12</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n3 = <span class="hljs-number">1</span> + <span class="hljs-number">2</span>;<span class="hljs-comment">//数字的3</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(n2, n3);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n4 = <span class="hljs-string">'1'</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span>;<span class="hljs-comment">//'12'+3 '123'</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n5 = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span>;<span class="hljs-comment">//3+3 6</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(n4, n5);
+</div><div class="hljs-line">        <span class="hljs-comment">//对于+号：两边只要有一个是字符串 那么就是字符串拼接；</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n6 = <span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-number">3</span> + <span class="hljs-string">'4'</span> + <span class="hljs-number">5</span>;<span class="hljs-comment">//3+3+'4'+5//6+'4'+5//'645'</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(n6);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n7 = <span class="hljs-string">'12'</span> - <span class="hljs-number">2</span>;<span class="hljs-comment">//10 先把两边的内容转成(Number)数字，再进行运算</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> n8 = <span class="hljs-number">12</span> - <span class="hljs-number">2</span>;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> m1 = <span class="hljs-built_in">Number</span>(<span class="hljs-string">''</span>);<span class="hljs-comment">//0</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> m2 = <span class="hljs-built_in">Number</span>(<span class="hljs-string">'12q'</span>);<span class="hljs-comment">//NaN</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//Number 转化的时候，字符串中有非数字(不包含小数点)，结果就是NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-comment">//四则运算 + - * / % 除了+  其他的都会把符号两边转化成数字再去运算</span>
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> m3 = <span class="hljs-string">'12q'</span> + <span class="hljs-number">3</span>;
+</div><div class="hljs-line">        <span class="hljs-keyword">var</span> m4 = <span class="hljs-string">'12q'</span> - <span class="hljs-number">3</span>;<span class="hljs-comment">//NaN-3  --&gt;NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        一个 = 是赋值，
+</div><div class="hljs-line">        两个 == 是相对比较，三个 === 是绝对比较
+</div><div class="hljs-line">        <span class="hljs-comment">// '1' == 1;//true</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// '1' === 1;//false</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// NaN == NaN//false</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// 'NaN' == NaN//false</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// //NaN 和谁都不相等</span>
+</div><div class="hljs-line">        <span class="hljs-comment">// 'NaN'=='NaN'//true</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-built_in">isNaN</span>(<span class="hljs-built_in">Number</span>(<span class="hljs-string">'m2f4'</span>));<span class="hljs-comment">//isNaN(NaN) //true</span>
+</div><div class="hljs-line">        <span class="hljs-literal">NaN</span>+<span class="hljs-number">1</span>+<span class="hljs-string">'2'</span><span class="hljs-comment">//NaN+'2' //NaN2</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//NaN和任何数字做运算 结果都是NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseInt</span>    <span class="hljs-built_in">parseFloat</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseInt</span>(<span class="hljs-string">'12.3'</span>)<span class="hljs-comment">//12</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseInt</span>(<span class="hljs-string">'23.3q'</span>)<span class="hljs-comment">//12</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//从左向右查看，遇到非数字(包含小数点)即停，获取到的是前边的数字部分</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//若第一位是非数字，则结果就是NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-built_in">Number</span>(<span class="hljs-string">''</span>)<span class="hljs-comment">//0</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseInt</span>(<span class="hljs-string">''</span>)<span class="hljs-comment">//NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'12.3'</span>)<span class="hljs-comment">//12.3</span>
+</div><div class="hljs-line">        <span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">'1q2.3'</span>)<span class="hljs-comment">//1</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//从左向右查看，遇到非数字(不包含小数点)即停，获取到的是前边的数字部分</span>
+</div><div class="hljs-line">        <span class="hljs-comment">//若第一位是非数字，则结果就是NaN</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">    <span class="hljs-number">0.1</span>+<span class="hljs-number">0.2</span>==<span class="hljs-number">0.3</span><span class="hljs-comment">//false</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>(<span class="hljs-string">'12.3q'</span>)<span class="hljs-comment">//NaN</span>
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>() <span class="hljs-built_in">Number</span>(<span class="hljs-string">''</span>) <span class="hljs-built_in">Number</span>([]) <span class="hljs-built_in">Number</span>(<span class="hljs-literal">null</span>) <span class="hljs-comment">//0</span>
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>({}) <span class="hljs-built_in">Number</span>(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//NaN</span>
+</div><div class="hljs-line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-string">'12.3q'</span>)<span class="hljs-comment">//先用Number处理 括号内的参数</span>
+</div><div class="hljs-line"><span class="hljs-built_in">parseInt</span>() 
+</div><div class="hljs-line"><span class="hljs-built_in">parseFloat</span>()   
+</div></code></pre>
+
+
+
+<h4 id="布尔类型boolean为了判断验证">布尔类型Boolean(为了判断、验证)</h4>
+
+<ul><li><p>把其他数据类型转化成布尔类型</p></li>
+<li><p>数字类型中 只有0 和NaN转成布尔类型是false 其他都是true</p></li>
+<li><p>字符串中 只有空字符串转成布尔是false，其他都是true</p></li>
+<li><p>两个特殊的null和undefined是false</p></li>
+</ul>
+
+<p>值类型  基本数据类型 <br>
+<code>除了 0 NaN '' null undefined 这五个值是false，其他都是true</code></p>
+
+<ul><li><p>! 取非、取反 先把感叹号后边的内容转化成布尔类型，然后再去取反</p></li>
+<li><p>!! 取反再取反，结果相当于用了一个Boolean，等于没取反 <br>
+   <code>var bol = !1; //false <br>
+     var bol2 = !''; //true <br>
+     var bol3 = ![]; //false</code> </p></li>
+</ul>
+
+
+
+<h4 id="null和undefined">null和undefined</h4>
+
+<ul><li><p>null 空指针对象</p>
+
+<ul>
+<li><p>一般在学习、开发中遇到null的情况基本上是元素没有获取到</p></li></ul></li>
+<li><p>undefined 未定义，有五中种情况会出现undefined</p>
+
+<ul>
+<li><p>1.变量定义未赋值</p></li>
+<li><p>2.对象没有某个属性的时候(对象没有属性是不会报错的)</p></li>
+<li><p>3.函数没有return，默认为undefined</p></li>
+<li><p>4.函数的形参数没有传实参 </p></li>
+<li><p>基本数据类型的自定义属性</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="windowonload">window.onload:</h4>
+
+<ul><li><p>当页面加载完成执行函数内的代码。 <br>
+<code>window.onload = function(){ <br>
+const box = document.getElementById('box'); <br>
+console.log(box.style); <br>
+} <br>
+// console.log(Object.prototype.__proto__); <br>
+</code></p></li>
+</ul>
+
+
+
+<h3 id="引用数据类型">引用数据类型</h3>
+
+
+
+<h6 id="引用类型复杂类型复合类型">（引用类型、复杂类型、复合类型）</h6>
+
+<ul><li><p>引用数据类型：数组 对象 函数 正则 日期Date Math…</p></li>
+</ul>
+
+
+
+<h4 id="普通对象">普通对象</h4>
+
+<ul><li><p>键值对    属性名:属性值</p></li>
+<li><p>属性值 可以是  任意数据类型</p></li>
+<li><p>属性名  都是字符串类型</p>
+
+<ul>
+<li><p><code>定义对象: <br>
+    标准写法: <br>
+       let obj = { <br>
+           "name":"小红" <br>
+       }  <br>
+    不过属性名可以不写引号</code></p></li></ul></li>
+</ul>
+
+<p><code>var obj = { <br>
+        name:"小红", <br>
+        age:9, <br>
+        1:2, <br>
+        _:2, <br>
+        $:3, <br>
+    }; <br>
+    // var 1 = 2; <br>
+    var _ = 1234; <br>
+    var $ = 123; <br>
+    console.log(obj[1])</code></p>
+
+<ul><li><p>获取属性值 有两种方式 </p>
+
+<ul>
+<li><p>一种是打点的方式，另一种是 [] 的方式</p></li>
+<li><p>若属性名是 数字； 那么我们只能使用[]的方式</p></li>
+<li><p>obj.1 错误</p></li>
+<li><p>打点的方式  完全等价于  [字符串] <br>
+<code>console.log(obj.age) <br>
+console.log(obj['age']); <br>
+var age = 'name'; <br>
+console.log(obj[age]);// obj['name'] '小红' <br>
+console.log(obj['age']) // obj.age 9 <br>
+console.log(obj[obj[age]])//obj['小红'] <br>
+// 对象中， 若没有对应的属性时，获取到的就是一个 undefined <br>
+var qqq = obj.qqq; <br>
+qqq === undefined <br>
+console.log(qqq+''); <br>
+var a = 12; <br>
+var b = a; <br>
+b = 13; <br>
+console.log(a);// 12</code></p></li></ul></li>
+</ul>
+
+
+
+<h5 id="typeof-检测数据类型">typeof 检测数据类型</h5>
+
+<p><code>string、number、undefined、boolean、object、function</code></p>
+
+<blockquote>
+  <p>相比ECMAScript的数据类型，是多了一个function，少了null（为object）</p>
+  
+  <ul><li><p>console.log(typeof 1) // ‘number’</p></li>
+  <li><p>console.log(typeof ‘1’) // ‘string’</p></li>
+  <li><p>console.log(typeof true) // ‘boolean’</p></li>
+  <li><p>console.log(typeof undefined) // ‘undefined’</p></li>
+  <li><p>console.log(typeof null) // ‘object’</p></li>
+  <li><p>console.log(typeof typeof 1) // ‘string’      </p></li>
+  <li><p>undefined === undefined //true</p></li>
+  <li><p>console.log(b === undefined);</p></li>
+  </ul>
+  
+  </blockquote>
+
+
+<h5 id="判断数组的函数">判断数组的函数:</h5>
+
+<ul><li><p>instanceof:左值是不是右值构造出来的，是就为true，否则false；右值是不是左值的老爹 <br>
+<code>let arr = [1,2,3]; <br>
+1.console.log(arr instanceof Object); <br>
+2.console.log( Object.prototype.toString.call(arr) === '[object Array]' ) <br>
+3.console.log(Array.isArray(arr));</code></p></li>
+<li><p>delete obj.age;  //删除某个属性就用delete</p></li>
+</ul>
+
+
+
+<h4 id="循环">循环</h4>
+
+
+
+<h5 id="for循环">for循环</h5>
+
+<ul><li><p>1.let i=0 只走一次</p></li>
+<li><p>2.判断条件 </p></li>
+<li><p>3.进循环体</p></li>
+<li><p>4.设置下次循环的条件</p>
+
+<ul>
+<li><p>2-&gt;3-&gt;4 2-&gt;3-&gt;4 <br>
+<code>for(let i=0;i&lt;6;i++){ <br>
+}</code></p>
+
+<blockquote>
+  <p>注意: <br>
+  遇到for嵌套for的时候，里面的变量名不要和外面的变量名一样 <br>
+  或者使用let <br>
+  大循环进一次，执行完小循环。</p>
+</blockquote></li></ul></li>
+</ul>
+
+
+
+<h5 id="循环中的跳过跳出">循环中的跳过、跳出</h5>
+
+<ul><li><p>循环中的跳过：continue</p></li>
+<li><p>循环中的跳出：break <br>
+<code>for(let i=0;i&lt;6;i++){ <br>
+    if(i===3){ <br>
+        // continue <br>
+        // break; <br>
+    }; <br>
+    alert(i); <br>
+}</code></p></li>
+</ul>
+
+
+
+<h5 id="while循环一般不知道要循环多少次才用">while循环:一般不知道要循环多少次才用</h5>
+
+<ul><li><p>1.判断条件</p></li>
+<li><p>2.条件成立进循环体</p></li>
+<li><p>3.设置下次循环的条件 <br>
+<code>while(条件){ <br>
+}</code></p></li>
+</ul>
+
+
+
+<h5 id="for-in对象使用for-in枚举对象的属性来达到循环目的">for in:对象使用for in枚举对象的属性来达到循环目的</h5>
+
+<ul><li><p>1.通过枚举对象身上的属性名，来做到循环的目的</p></li>
+<li><p>2.循环的次数跟对象的属性的个数有关系</p></li>
+<li><p>3.只要是遍历对象的情况下，使用for in循环 <br>
+<code>let obj = { <br>
+    width:'100px', <br>
+    height:'200px', <br>
+    background:'red', <br>
+    border:'1px solid #000' <br>
+} <br>
+for(let attr in obj){ <br>
+    box.style[attr] = obj[attr]; <br>
+}</code></p></li>
+</ul>
+
+
+
+<h4 id="函数function">函数Function:</h4>
+
+<ul><li><p>代码块，为了复用。</p></li>
+<li><p>定义:</p>
+
+<ul>
+<li><p>1.函数声明</p>
+
+<ul>
+<li><p>如果函数不带名字，那么属于匿名函数, 直接写匿名函数是会报错的。</p></li>
+<li><p>如何避免报错呢？ <br>
+    1.声明函数时要有名字 <br>
+    2.匿名函数要为一个表达式</p></li></ul></li>
+<li><p>2.函数表达式</p></li>
+<li><p>3.类声明</p>
+
+<ul>
+<li><p>new Function</p></li></ul></li></ul></li>
+<li><p>调用:</p>
+
+<ul>
+<li><p>函数名 + 括号  fn()</p></li>
+<li><p>事件调用 onclick = function(){}</p>
+
+<ul>
+<li><p>一般是赋值一个匿名函数或者是赋值一个函数（名）地址</p></li></ul></li>
+<li><p>定时器调用  </p>
+
+<ul>
+<li><p>setTimeout(function(){},1000);</p></li>
+<li><p>setInterval(function(){},1000);   </p></li></ul></li></ul></li>
+<li><p>定义函数的时候开辟了一个新的堆内存空间，把函数内的代码转成字符串，存到堆内存中，再把空间地址赋值给变量或者函数名</p></li>
+<li><p>调用开辟一个执行栈，把代码块中的代码复制到执行栈中执行，参数赋值，执行上下文直到销毁变量</p></li>
+<li><p>函数参数:</p>
+
+<ul>
+<li><p>在函数声明的时候放在括号内的自定义名字（形式上的参数）</p>
+
+<ul>
+<li><p>function fn(a){}  a就为形参</p></li></ul></li>
+<li><p>实参:在函数调用的时候放在括号内的随意数据说（实实在在的参数）</p>
+
+<ul>
+<li><p>fn(1)  1就是实参</p>
+
+<ul>
+<li><p>实参能传所有类型的数据</p></li>
+<li><p>实参内能传若干个数据，一个与一个之间用逗号分隔，且可以为所有的数据类型</p></li></ul></li></ul></li></ul></li>
+<li><p>return</p>
+
+<ul>
+<li><p>函数执行有两件大事莫忘:</p>
+
+<ul>
+<li><p>1.执行函数</p></li>
+<li><p>2.函数返回值</p>
+
+<ul>
+<li><p>函数内有return返回值就为return后面的值，如果没有return就是undefined</p></li>
+<li><p>不管是函数还是方法，都有返回值。 <br>
+<code>function fn(){ <br>
+let a = 10; <br>
+return a; <br>
+} <br>
+console.log(fn());</code></p></li></ul></li></ul></li></ul></li>
+<li><p>return下面的代码会被中断</p></li>
+<li><p>return也可以在函数中的循环下，终止循环</p></li>
+<li><p>让函数外使用函数内的运算结果时，使用return。</p>
+
+<ul>
+<li><p>alert(alert(5));  //=&gt;5 undefined</p></li></ul></li>
+<li><p>arguments是一个在函数内的类数组（长得像数组，但是不是真数组）        </p>
+
+<ul>
+<li><p>一般是实参有很多个，能用到arguments</p></li>
+<li><p>arguments：只要是一个函数都有arguments，是一个实参的类数组集合，有length，能使用下标操作，但是不能使用数组的方法。</p></li>
+<li><p>arguments的某个是跟形参一一对应的。</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="函数与方法的区分">函数与方法的区分</h4>
+
+<ul><li><p>函数: <br>
+<code>function fn(){}</code></p></li>
+<li><p>方法: <br>
+<code>let obj = { <br>
+fn:function(){ <br>
+} <br>
+}</code></p>
+
+<ul>
+<li><p>fn();  函数前面没有主，没有点</p></li>
+<li><p>obj.fn(); 方法前面有主，有.</p>
+
+<ul>
+<li><p>1.元素没有获取到</p></li>
+<li><p>2.在正则中搜索不到字符就会为null</p></li>
+<li><p>3.原型链的末端 <br>
+<code>function fn(){ <br>
+console.log(this); <br>
+} <br>
+let obj = { <br>
+fn:function(){ <br>
+console.log(this); <br>
+}, <br>
+fn2:function(){ <br>
+} <br>
+} <br>
+// fn(); //window <br>
+// obj.fn(); //obj，.前面的 <br>
+// let box = document.getElementById('box'); <br>
+// console.log( box ); <br>
+let str = '2345ndsja'; <br>
+// console.log(str.match(/a/)); <br>
+// console.log(Object.prototype.__proto__);</code></p></li></ul></li></ul></li>
+</ul>
+
+<p><code>凡是能用点的地方都能用[] <br>
+ 不过[]内要么是变量，要么是属性名(字符串) <br>
+点 -&gt; 只有属性名才用.</code></p>
+
+
+
+<h4 id="匿名函数">匿名函数()</h4>
+
+<ul><li><p>( )提权:</p>
+
+<ul>
+<li><p>(1+1)*2  </p>
+
+<ul>
+<li><p>括号中的就变成了表达式</p></li></ul></li>
+<li><p>匿名函数自执行</p>
+
+<blockquote>
+  <p>注意: 在匿名函数的前面加上分号，不然容易报错。</p>
+</blockquote></li></ul></li>
+</ul>
+
+
+
+<h4 id="前自增后自增">前自增后自增</h4>
+
+<ul><li><p>前自增++num;</p></li>
+<li><p>后自增num++;</p>
+
+<ul>
+<li><p>当输出或者比较某个变量的时候，是变量与变量进行比较</p></li>
+<li><p>前自增，在找到变量之前就被处理过了，找到变量是被处理过后的变量</p></li>
+<li><p>后自增，在找到变量之前什么事儿都没发生，找到的变量就为非处理过的值  <br>
+<code>// alert( num ++); //1  <br>
+// alert(++ num); //2  <br>
+// console.log(num++ == ++num ); //1 3 false  <br>
+// console.log(++ num == num++);//2 2 true  <br>
+// console.log(num);  <br>
+btn.onclick = function(){  <br>
+ul.innerHTML += '&lt;li&gt;'+ (++num) +'&lt;/li&gt;';  <br>
+}</code></p></li></ul></li>
+</ul>
+
+
+
+<h4 id="判断">判断</h4>
+
+<ul><li><p>if判断 <br>
+<code>if(条件成立){  <br>
+执行这里代码 <br>
+}else{ 否则执行这里 <br>
+}</code></p></li>
+<li><p>switch <br>
+<code>switch (变量) {  <br>
+case 2: （条件）  <br>
+console.log('语句一')  <br>
+break; （中断判断）  <br>
+default:（默认）  <br>
+break;  <br>
+}</code></p>
+
+<blockquote>
+  <p>注意:  <br>
+  break必须写，不然会穿透（当一个条件成立之后，还会执行下面的代码）  <br>
+  能用switch一定能用if判断，能用if判断的地方不一定能用switch</p>
+</blockquote></li>
+</ul>
+
+
+
+<h3 id="自定义属性">自定义属性</h3>
+
+<blockquote>
+  <p>定义：就是给某个对象（元素）加上一个自定义的“变量” <br>
+  目的：为了让这个“变量”跟某个对象（元素）进行对应。</p>
+</blockquote>
+
+<ul><li><p>当需要操作一个元素的时候去对应另一个元素（数据）， 那么就要想到索引（自定义属性）。</p>
+
+<ul>
+<li><p>obj.属性名 || obj[‘属性名’]</p></li>
+<li><p>let a = 10; 变量，前面没有.</p></li>
+<li><p>obj = { <br>
+        a:10 <br>
+    } <br>
+    obj.a 属性，前面有.</p></li>
+<li><p>function fn(){}  函数 <br>
+    fn()</p></li>
+<li><p>obj = { <br>
+        fn:function(){}  方法 <br>
+    } <br>
+    obj.fn()</p></li></ul></li>
+<li><p>this 在事件中，一般事件触发谁，this就是谁</p>
+
+<ul>
+<li><p>事件触发的时候，this就是触发的元素</p>
+
+<ul>
+<li><p>onclick  点击</p></li>
+<li><p>onmouseover  移入</p></li>
+<li><p>onmouseout   移出 <br>
+<code>btn.num = 0;  <br>
+btn2.num = 0; <br>
+btn.onclick = fn; <br>
+btn2.onclick = fn; <br>
+// function(){ <br>
+//     btn2.innerText = '按钮('+ (++num2) +')'; <br>
+// } <br>
+function fn(){ <br>
+this.innerText = '按钮('+ (++this.num) +')'; <br>
+// console.dir(this.num); //这个 <br>
+}</code></p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="属性的操作">属性的操作</h4>
+
+<ul><li><p>box.属性有2种方式是可以直接获得到的</p>
+
+<ul>
+<li><p>1.设置了一个 box.zdy = 0;</p>
+
+<ul>
+<li><p>console.log(box.zdy)</p></li></ul></li>
+<li><p>2.元素对象默认的属性</p>
+
+<ul>
+<li><p>box.id</p></li></ul></li></ul></li>
+<li><p>在行间设置自定义属性</p>
+
+<ul>
+<li><p><strong>ele.setAttribute(‘属性名’,’属性值’)</strong></p></li></ul></li>
+<li><p>在行间获取自定义属性</p>
+
+<ul>
+<li><p><strong>ele.getAttribute(‘属性名’)</strong></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="数组方法">数组方法</h3>
+
+<ul><li><p>数组写法:</p>
+
+<ul>
+<li><p>let arr = []; 性能要高</p></li>
+<li><p>let arr = new Array();</p>
+
+<ul>
+<li><p>有length,既能读也能写</p></li>
+<li><p>数组中获取每个值通过下标去操作它 [1,2,3][number]</p></li>
+<li><p>数组的最后一个一定是数组.length-1</p></li>
+<li><p>把数组清空：arr.length = 0;</p></li>
+<li><p>要知道数组中要什么方法，直接console.dir数组 <br>
+去看 <code>__proto__</code>下的方法即可。</p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="1push">1、push:</h4>
+
+<ul><li><p>给数组的最后一位添加，一个或者多个数据，一个与一个之间用逗号分隔</p></li>
+<li><p>返回值为新数组的长度，改变原数组。 <br>
+<code>// let arr = new Array(); <br>
+let arr = [1,'好的',true,function fn(){}]; <br>
+// arr.length = 5; <br>
+// arr[4] = '100'; <br>
+let a = arr.push(5,2); <br>
+console.dir(a);</code></p></li>
+</ul>
+
+
+
+<h4 id="2pop传参都是唬人的">2、pop(传参都是唬人的)</h4>
+
+<ul><li><p>往数组的最后一位删除一个数据</p></li>
+<li><p>返回值为删除的那个，改变原数组</p></li>
+</ul>
+
+
+
+<h4 id="3unshift">3、unshift:</h4>
+
+<ul><li><p>往数组的首位添加一个或者多个数据</p></li>
+<li><p>返回值是新数组的长度，改变原数组</p></li>
+</ul>
+
+
+
+<h4 id="4shift">4、shift:</h4>
+
+<ul><li><p>往数组的首位删除一个数据</p></li>
+<li><p>返回值是删除的那个，空即为undefined，改变原数组</p></li>
+</ul>
+
+
+
+<h4 id="5splice">5、splice:</h4>
+
+<ul><li><p>能够增删改查数组,根据参数的不同，结果就不同</p></li>
+<li><p>返回值为被删除数组，无删除则不返回，改变原数组</p>
+
+<ul>
+<li><p>删除:(2个参数)</p>
+
+<ul>
+<li><p>第一个参数就是从数组的第几位起（选择数组的起始位置）</p></li>
+<li><p>从0开始计数</p></li>
+<li><p>第二个参数就是操作几个数据(删除几个)</p></li>
+<li><p>返回值就是删除的那几个 <br>
+<code>let arr = [1,2,3,4]; <br>
+console.log(arr.splice(0,2));//从0开始，删除2个</code></p></li></ul></li>
+<li><p>添加:(从哪开始添加,是否替换,添加的数据)</p>
+
+<ul>
+<li><p>第一个参数就是从数组的第几位起（选择数组的起始位置）</p></li>
+<li><p>从0开始计数</p></li>
+<li><p>第二个参数 <br>
+    就是操作几个数据(是否替换) <br>
+    如果是替换，写替换几个数字</p></li>
+<li><p>第三个参数:(或者以上) <br>
+    添加多个 <br>
+<code>let arr = [1,2,3,6,7,5,6,7,8]; <br>
+从5开始，一个都不删除，添加6和7 <br>
+最后的结果是: <br>
+    [1,2,3,6,7,5,6,7,8] <br>
+arr.splice(3,0,6,7);</code></p></li></ul></li>
+<li><p>替换:</p>
+
+<ul>
+<li><p>第二个参数：替换几个 <br>
+<code>let arr = [23,213,12]; <br>
+从数组的第0位开始，删除23和213,替换成212 <br>
+结果: <br>
+    [212,12] <br>
+arr.splice(0,2,212); <br>
+console.log(arr);</code></p>
+
+<blockquote>
+  <p>注意: <br>
+  如果第2位为0，那么返回值为空数组， <br>
+  也就是说，第二位不为0，返回值就是你删除的那(几)个数据 <br>
+  返回的是<em>数组</em>。</p>
+</blockquote></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="6foreach专门用来循环数组的">6、forEach:专门用来循环数组的。</h4>
+
+<ul><li><p>两个参数:</p>
+
+<ul>
+<li><p>第一个参数: <br>
+函数-&gt; function(){} <br>
+function(数组中的每个值,索引值,整个数组){ <br>
+}</p></li>
+<li><p>第二个参数: <br>
+改变this指向,写啥是啥（如果写个null,undefined还是为window）</p></li></ul></li>
+<li><p>返回值是undefined，不会改变原数组。 <br>
+<code>let arr = [true,'haha',10,{},[1,2,3]]; <br>
+arr.forEach(function(item,i,all){ <br>
+    // console.log(item);//数组中的每项 <br>
+    // console.log(i); //索引 <br>
+    // console.log(this); <br>
+},arr);</code></p></li>
+</ul>
+
+
+
+<h4 id="7map">7、map:</h4>
+
+<ul><li><p>循环数组</p></li>
+<li><p>返回值为新的数组，原数组不会改变。</p>
+
+<ul>
+<li><p>function(item,i,all){ <br>
+            return 新数组的每项 <br>
+        } <br>
+<code>let arr = [1,'你好','哈哈','呵呵']; <br>
+let newArr = arr.map(function(item,i,all){ <br>
+// console.log(item,i,all) <br>
+return '&lt;li&gt;'+ item +'&lt;/li&gt;' <br>
+}); <br>
+console.log(newArr); <br>
+// console.log(); <br>
+ul.innerHTML = newArr.join('');</code></p></li></ul></li>
+</ul>
+
+
+
+<h4 id="8join">8、join():</h4>
+
+<ul><li><p>以某个字符串为连接符，连接数组的每一项</p></li>
+<li><p>返回值一个字符串，不改变原数组</p>
+
+<blockquote>
+  <p>注意： <br>
+  如果不需要连接符，必须使用空字符串表示” <br>
+  <code>let arr = ['你','好','吗']; //'你|好' <br>
+  console.log(arr.join('')); <br>
+  // console.log(arr.join().length); <br>
+  // console.log(arr[0]+arr[1]);</code></p>
+</blockquote></li>
+</ul>
+
+
+
+<h4 id="9filter过滤条件成立的值">9、filter：过滤条件成立的值</h4>
+
+<ul><li><p>参数: <br>
+function(item,i,all){ <br>
+ return 条件成立的某项 <br>
+}</p>
+
+<ul>
+<li><p>在函数中，只有条件成立的结果才能返回到数组中</p></li>
+<li><p>return必须是true</p></li></ul></li>
+<li><p>返回值不会改变原数组 <br>
+<code>//过滤大于28的数字 <br>
+let arr = [18,28,38,48,26]; <br>
+let arr2 = arr.filter(function(item,i){ <br>
+    if(item &gt; 20 &amp;&amp; item &lt;= 28){ <br>
+        return item; <br>
+    } <br>
+    // return item &gt; 20 &amp;&amp; item &lt;= 28; <br>
+}); <br>
+// let arr3 = arr.filter(e=&gt;e &gt; 20 &amp;&amp; e &lt;= 28); <br>
+console.log(arr3);</code></p></li>
+</ul>
+
+
+
+<h4 id="10reverse翻转数组">10、reverse：翻转数组</h4>
+
+<ul><li><p>颠倒数组顺序，改变原数组</p>
+
+<ul>
+<li><p>[1,2,3] -&gt; [3,2,1] <br>
+<code>// let arr = [1,2,3]; <br>
+// arr.reverse(); <br>
+// console.dir(arr);  <br>
+let str = '您迎欢峰珠'; //转成'珠峰欢迎您'    console.log(str.split('').reverse().join(''));</code></p></li></ul></li>
+</ul>
+
+
+
+<h4 id="11some">11、some:</h4>
+
+<ul><li><p>查看数组中某项数据是否满足某个条件，</p>
+
+<ul>
+<li><p>只要有一个符合条件就返回true，</p></li>
+<li><p>如果所有项条件都不成立，返回false</p></li></ul></li>
+<li><p>返回一个布尔值 <br>
+<code>let arr = [1,2,3,4,5]; <br>
+//查看数组中是否有6，明显没有，就返回false <br>
+console.log(arr.some(function(item){return item===6}))</code></p></li>
+</ul>
+
+
+
+<h4 id="12every">12、every:</h4>
+
+<ul><li><p>判断数组中是不是每一项都符合某个条件 <br>
+全部都符合返回true，只要有一项不符合就返回false</p>
+
+<ul>
+<li><p>参数: <br>
+function (item,i,all){ <br>
+        } <br>
+<code>//就想知道，这个数组中是否所有项都为true <br>
+let arr = [true,true,true,true,false]; <br>
+let a = arr.every(function(item){ <br>
+return item; <br>
+}) <br>
+console.log(a);</code></p></li></ul></li>
+</ul>
+
+
+
+<h4 id="13sort-排序">13、sort 排序</h4>
+
+<ul><li><p>sort默认排序是按照unicode编码来排序的</p>
+
+<ul>
+<li><p>也可以使用自定义排序</p>
+
+<ul>
+<li><p>sort中需要传入一个函数，让a,b，是正数就交换位置，是负数就不交换位置</p></li>
+<li><p>a-b就是从小到大排序</p></li>
+<li><p>b-a就是从大到小排序</p></li></ul></li></ul></li>
+<li><p>返回新数组，改变原数组 <br>
+<code>let arr = ['2px',3,4,7,1,6,12]; <br>
+arr.sort(function(a,b){ <br>
+    return parseInt(a)-parseInt(b); <br>
+}); <br>
+console.log(arr);</code></p></li>
+</ul>
+
+
+
+<h4 id="14concat">14、concat()</h4>
+
+<ul><li><p>连接一个或者多个数组</p></li>
+<li><p>返回值为新的数组，不改变原数组</p></li>
+<li><p>就算是没有数组连接</p>
+
+<ul>
+<li><p>比如：</p>
+
+<ul>
+<li><p>arr.concat() -&gt; 克隆一份数组 <br>
+<code>let arr2 = [1,2,3]; <br>
+let arr3 = [4,5,6]; <br>
+console.log(arr2.concat(arr3,[7,8,9]));</code></p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="15数组截取">15、数组截取</h4>
+
+<ul><li><p>slice(包含起始位置,结束位置但不包含结束位置)</p>
+
+<ul>
+<li><p>返回值为新数组</p></li>
+<li><p>不会改变原数组。 <br>
+<code>let arr = [1,2,3,6,5]; <br>
+console.log(arr.slice(2,4));//-&gt;[3,6] <br>
+console.log(arr);</code>//-&gt;[1, 2, 3, 6, 5]</p></li></ul></li>
+</ul>
+
+
+
+<h3 id="字符串方法">字符串方法</h3>
+
+<ul><li><p><strong>字符串: ” “” ``</strong></p></li>
+<li><p>页面中获取出来的内容都是字符串</p>
+
+<ul>
+<li><p>（value、innerHTML、inerText、href、src、className、id、width…）</p>
+
+<ul>
+<li><p>new String(‘123’)</p></li></ul></li></ul></li>
+<li><p>字符串的length只可读不可写</p></li>
+<li><p>字符串的方法基本上是不改变原字符串的。</p></li>
+</ul>
+
+
+
+<h4 id="1split">1、split(”):</h4>
+
+<ul><li><p>以字符为分隔符，把字符串分割为数组。</p></li>
+<li><p>返回值是数组。</p></li>
+<li><p>如果没有分割符，使用空字符串去切， <br>
+如果什么都不传，把整个字符串放到数组中 <br>
+<code>//    let str = '珠-峰'; //-&gt;  <br>
+//    console.log(str.split('-')); //-&gt; ['珠','峰'] <br>
+let str = '珠峰'; //-&gt; ['珠','峰'] <br>
+console.log(str.split(''));</code></p></li>
+</ul>
+
+
+
+<h4 id="2截取类substring00substr00">2、截取类:substring(0,0)、substr(0,0)</h4>
+
+<ul><li><p>substring(0,0)</p>
+
+<ul>
+<li><p>从哪里开始截取，到哪里结束，但不包含结束位置</p></li>
+<li><p>如果你只传一个参数，那么就是从哪开始，截取到字符串的最后</p></li></ul></li>
+<li><p>substr(0,0)  从哪开始截取几个 <br>
+<code>// let str = new String('123'); <br>
+// console.log(str); <br>
+// let str = 'dsjdsadsandkjwyque01k'; <br>
+// str.length = 1; <br>
+// console.log(str.length); <br>
+// console.dir(str); <br>
+// console.log(str.substring(3,9));//dsadsa</code></p></li>
+</ul>
+
+
+
+<h4 id="3indexof指定字符从哪位开始">3、indexOf(指定字符,从哪位开始)</h4>
+
+<ul><li><p>找到指定字符首次出现的位置，返回出来索引，找不到-1 <br>
+<code>let str = 'xsdmufGxw'; <br>
+// console.log(str.indexOf('x')) <br>
+// console.log(str.indexOf('x',2)) <br>
+// console.log(str.indexOf('z'))</code></p></li>
+</ul>
+
+
+
+<h4 id="4includes-包含字符串中是否包含指定字符包含就返回true否则false">4、includes 包含，字符串中是否包含指定字符，包含就返回true，否则false</h4>
+
+<p><code>console.log(str.includes('z'));</code></p>
+
+
+
+<h4 id="5touppercase-把小写英文转成大写英文">5、toUpperCase  把小写英文转成大写英文</h4>
+
+<p><code>console.log(str.toUpperCase())</code></p>
+
+
+
+<h4 id="6tolowercase-把大写英文转成小写英文">6、toLowerCase  把大写英文转成小写英文</h4>
+
+<p><code>console.log(str.toLowerCase());</code></p>
+
+
+
+<h4 id="7trim-去掉前后空格">7、trim  去掉前后空格</h4>
+
+<p><code>console.log(' dsadjsadsa   '.trim())</code></p>
+
+
+
+<h4 id="8replace-替换">8、replace 替换</h4>
+
+<p><code>stringObject.replace(regexp/substr,replacement)</code></p>
+
+
+
+<h3 id="时间对象">时间对象</h3>
+
+<ul><li><p>日历、倒计时、时钟</p></li>
+<li><p>时间对象:用户本地的时间（所以说不安全）</p></li>
+<li><p>new Date()</p></li>
+</ul>
+
+
+
+<h5 id="获取出来的都是数字类型">获取出来的都是数字类型</h5>
+
+<ul><li><p>年：date.getFullYear()</p></li>
+<li><p>月：date.getMonth()+1</p>
+
+<ul>
+<li><p>获取出来的时间比当前月份少1,所以要加1</p></li></ul></li>
+<li><p>日：date.getDate()</p></li>
+<li><p>周几：date.getDay()  周日为0</p></li>
+<li><p>时：date.getHours()</p></li>
+<li><p>分：date.getMinutes()</p></li>
+<li><p>秒：date.getSeconds() <br>
+<code>let date = new Date(); <br>
+// console.log(date.getFullYear()); <br>
+// console.log(date.getMonth()+1); <br>
+// console.log(date.getDate()); <br>
+// console.log(date.getDay()); <br>
+// console.log(date.getHours()) <br>
+// console.log(date.getMinutes()); <br>
+// console.log(date.getSeconds()); <br>
+// console.log( new Date() )</code></p></li>
+</ul>
+
+
+
+<h3 id="定时器">定时器</h3>
+
+<ul><li><p><strong>setInterval</strong>(函数,指定时间(毫秒),函数的实参) (连续炸)</p>
+
+<ul>
+<li><p>每间隔一段指定时间，就执行一次函数</p></li>
+<li><p>返回值为数字(即为的编号)。</p>
+
+<ul>
+<li><p><strong>clearInterval</strong>(编号) ：清除</p></li></ul></li></ul></li>
+<li><p>setTimeout(函数,指定时间(毫秒),第一个函数的实参)</p>
+
+<ul>
+<li><p>当到指定的时间时，只执行一次函数</p></li>
+<li><p>返回值为数字(即为的编号)。</p>
+
+<ul>
+<li><p>clearTimeout(编号); ：清除 <br>
+<code>let timer=null,timer2 = null; <br>
+btn.onclick = function(){ <br>
+// timer = setTimeout(function(){ <br>
+//     console.log('bong,bong'); <br>
+// },2000); <br>
+timer2 = setInterval(function(){ <br>
+console.log('bong,bong,就不信炸不死!'); <br>
+},2000); <br>
+} <br>
+btn2.onclick = function(){ <br>
+// console.log(timer,timer2); <br>
+// clearTimeout(timer); <br>
+clearInterval(timer2); <br>
+}</code></p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h3 id="倒计时">倒计时</h3>
+
+<ul><li><p>未来的时间 -  现在的时间 = 剩下的时间</p>
+
+<ul>
+<li><p>12:30      -       12:10 = 20</p></li></ul></li>
+<li><p>Math.floor(11.638683333) -&gt; 11  向下取整</p></li>
+<li><p>Math.ceil(11.638683333) -&gt; 12   向上取整 <br>
+<code>//时间对象中可以放数字，月份以当前月份 - 1 <br>
+let d = new Date(2019,3,10,12,30); //未来的时间 <br>
+function fn(){ <br>
+let d2 = new Date(); //当前的时间 <br>
+// console.log(d - d2); //毫秒来计算的 <br>
+// 848206  <br>
+let s = (d - d2)/1000; <br>
+let m = Math.floor(s/60) <br>
+box.innerHTML = m+'分'+Math.floor(s%60) +'秒'; <br>
+// console.log(); <br>
+} <br>
+fn(); <br>
+setInterval(fn,1000);</code></p></li>
+</ul>
+
+
+
+<h5 id="计算时间公式">计算时间公式</h5>
+
+<ul><li><p>第一种公式： <br>
+<code>天：86400 = 60*60*24  : Math.floor(t/86400) <br>
+小时：Math.floor(t%86400/3600) <br>
+分钟：Math.floor(t%86400%3600/60) <br>
+秒：Math.floor(t%60)</code></p></li>
+<li><p>第二种公式： <br>
+<code>天  Math.floor(t/86400); <br>
+    t%=86400; <br>
+小时   var h=Math.floor(t/3600); <br>
+     t%=3600; <br>
+分钟   var m=Math.floor(t/60); <br>
+秒     t%=60;</code></p></li>
+<li><p>常用的取整公式 <br>
+<code>x ~ y : Math.round(Math.random()*(y-x) + x) <br>
+0 ~ x : Math.round(Math.random()*x) <br>
+1 ~ x : Math.ceil(Math.random()*x)||1 <br>
+0 ~ x-1 : Math.floor(Math.random()*x)</code></p></li>
+<li><p>时间对象中可以放数字，月份以当前月份 - 1 <br>
+<code>let d = new Date(2019,3,10,12,30); //未来的时间</code></p></li>
+</ul>
+
+
+
+<h3 id="递归函数自己调用自己">递归：函数自己调用自己</h3>
+
+<ul><li><p>为什么要自己调用自己？</p>
+
+<ul>
+<li><p>一个函数里面有相应的运算或者是逻辑处理 <br>
+需要这个处理重复执行，所以才需要自己调用自己。</p></li></ul></li>
+</ul>
+
+<blockquote>
+  <p>注意：递归容易死循环，所以需要写上递归中终止条件</p>
+  
+  <p>遇到Maximum call stack size exceeded报错，就是递归死循环 <br>
+  <code>let n = 10; <br>
+   function fn(n) { <br>
+       if (n == 1) return 1; <br>
+       return fn(n - 1) + n; <br>
+   } <br>
+   console.log(fn(n));</code></p>
+</blockquote>
+
+
+
+<h3 id="domdocument-object-model-文档对象模型">DOM：Document  Object  Model 文档对象模型</h3>
+
+<ul><li><p>通过document提供了一些api，能够赋予开发者操作页面的能力</p></li>
+<li><p>当通过document提供的api获取到元素的时候，获取到的元素是个对象，它跟页面的标签是相映射的关系，也就是说，通过操作对象的属性能够操作标签。</p></li>
+<li><p>DOM树 -&gt; 由节点组成。</p></li>
+<li><p>难点关系:</p>
+
+<ul>
+<li><p>父子关系</p>
+
+<ul>
+<li><p>parentNode  父节点</p></li>
+<li><p>childNodes  所有子节点（包括元素节点、文本节点、注释节点）</p></li>
+<li><p>children  获取某个元素下的元素子节点。</p></li></ul></li>
+<li><p>祖孙关系</p></li>
+<li><p>兄弟关系：</p>
+
+<ul>
+<li><p>previousElementSibling上一个兄弟节点</p></li>
+<li><p>nextElementSibling 下一个兄弟节点</p></li>
+<li><p>没有就是null</p></li></ul></li></ul></li>
+<li><p>第一个娃 firstElementChild</p></li>
+<li><p>最后一个娃 lastElementChild</p></li>
+</ul>
+
+
+
+<h3 id="节点整个html中全是节点">节点：整个html中全是节点</h3>
+
+<ul><li><p>标签-&gt;元素节点：数字1</p></li>
+<li><p>属性节点：数字2</p></li>
+<li><p>文本节点：数字3  文字、换行</p></li>
+<li><p>注释节点：数字 8</p></li>
+<li><p>document：数字9</p></li>
+</ul>
+
+
+
+<h4 id="1属性nodetype-值是一个数字">1、属性：nodeType -&gt;值是一个数字</h4>
+
+<ul><li><p>去查看节点类型的</p></li>
+</ul>
+
+
+
+<h4 id="2childnodes-子节点">2、childNodes  子节点</h4>
+
+
+
+<h4 id="3children-子级元素节点不是标准但是所有浏览器都支持">3、children  子级元素节点，不是标准，但是所有浏览器都支持</h4>
+
+
+
+<h4 id="4nodevalue-查看节点内容">4、nodeValue  查看节点内容</h4>
+
+
+
+<h4 id="5attributes-属性返回指定节点的属性集合即-namednodemap">5、attributes 属性返回指定节点的属性集合，即 NamedNodeMap。</h4>
+
+<blockquote>
+  <p>提示：您可以使用 length 属性来确定属性的数量，然后您就能够遍历所有的属性节点并提取您需要的信息。</p>
+</blockquote>
+
+
+
+<h4 id="6创建一个元素节点">6、创建一个元素节点</h4>
+
+<ul><li><p>document.createElement(‘li’)</p></li>
+</ul>
+
+
+
+<h4 id="7添加元素">7、添加元素</h4>
+
+<ul><li><p>往元素的末尾添加元素</p>
+
+<ul>
+<li><p>parent.appendChild(child);</p></li></ul></li>
+<li><p>往元素的首位添加元素</p>
+
+<ul>
+<li><p>parent.insertBefore(插入的元素,参照元素);</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="8删除parentremovechild哪个元素">8、删除:parent.removeChild(哪个元素)</h4>
+
+
+
+<h4 id="9clonenodetrue-克隆元素">9、cloneNode(true) 克隆元素</h4>
+
+<ul><li><p>如果添加了true，不但能克隆元素本身，还克隆子级</p>
+
+<blockquote>
+  <p>注意：在chrome的73.0.3683.103中多次克隆报错</p>
+</blockquote></li>
+</ul>
+
+
+
+<h3 id="math">Math</h3>
+
+<blockquote>
+  <p>Math  是一个内置对象，处理数学问题，比如：四舍五入  取整  随机数等等</p>
+</blockquote>
+
+<ul><li><p>Math.round() 四舍五入 <br>
+<code>console.log(typeof Math.round) // "function" <br>
+Math.round(1.5) // 2</code></p></li>
+<li><p>Math.ceil() 向上取整，有小数，整数部分就加1 <br>
+<code>Math.ceil(2.1) // 3 <br>
+Math.ceil(0.1) // 1</code></p></li>
+<li><p>Math.floor  向下取整 <br>
+<code>Math.floor(2.1) // 2 <br>
+Math.floor(1.9) // 1</code></p></li>
+<li><p>Math.abs 返回绝对值 <br>
+<code>Math.abs(-1)//1</code></p></li>
+<li><p>Math.max() 返回一堆数中最大值 <br>
+<code>Math.max(3,4,7,16)//16 <br>
+**Math.max不可以直接对数组进行求值** <br>
+var arr = [4, 1, 3, 12, 11] <br>
+console.log(Math.max(arr))</code></p></li>
+<li><p>Math.min() 返回一堆数中最小值 <br>
+<code>Math.min(3,4,7,16)//3</code></p></li>
+<li><p><strong>ES6 扩展运算符 …对象 将后面的对象展开</strong> ，新开一个地址 <br>
+<code>[4, 1, 3, 12, 11] =&gt; 4 1 3 12 11 <br>
+console.log(...arr) // 4 1 3 12 11 <br>
+console.log(Math.max(4, 1, 3, 12)) <br>
+console.log(Math.max(...arr)) // 12</code></p></li>
+<li><p>Math.random() 方法返回介于0到1之间一个随机小数，包含0，不包括1（包前不包后） <br>
+<code>Math.random() // 0.8458846320507001</code></p>
+
+<ul>
+<li><p>获取n-m之间的随机小数 <br>
+<code>Math.random()*(m-n)+n</code></p></li>
+<li><p>1到10之间 随机小数 <br>
+<code>Math.random() * (10 - 1) + 1</code></p></li>
+<li><p>获取n到m之间的随机整数 <br>
+<code>Math.round(Math.random() * (m - n) + n)</code></p></li>
+<li><p>1到10之间 随机整数 <br>
+<code>Math.round(Math.random() * (10 - 1) + 1)</code>        </p></li>
+<li><p>0到m之间的随机整数  <br>
+ <code>Math.round(Math.random() * m)</code></p></li>
+<li><p>获取0到10之间的随机整数  <br>
+ <code>Math.round(Math.random() * (10 - 0) + 0) <br>
+    Math.round(Math.random() * 10) <br>
+    Math.round(Math.random() * 100)</code></p></li></ul></li>
+<li><p>Math.PI 圆周率 3.1415926</p></li>
+</ul>
+
+
+
+<h3 id="作用域">作用域</h3>
+
+
+
+<h4 id="1全局作用域">1.全局作用域</h4>
+
+<ul><li><p>执行栈，在script标签内第一层js代码</p></li>
+<li><p>(1)如果当前script中的全局没有某个变量， <br>
+这个时候还会向上面的script中去查找（只会向上找，默认不会向下找）有就输出，否则报错。</p></li>
+<li><p>(2)如果有多个script标签，上面的script中的代码报错，是不会影响，下面script标签内的代码执行的。</p></li>
+<li><p>(3)全局的this为window</p></li>
+<li><p>(4)从作用域链的角度来说，最终会找到widnow下有没有某个属性(var的情况)</p></li>
+<li><p>(5)多个script标签如果都用了let，那么同样走let特性(不能有重名变量)</p></li>
+<li><p>(6)使用var的时候等同于在widnow下注册了一个属性，并且在没赋值之前为undefined <br>
+不过在chrome|FF下 在变量的上方打印window的时候会有属性值结果，要注意的是，显示出来的是骗人的（跟undefined走）</p></li>
+<li><p>(7)函数默认也是挂在window身上的</p></li>
+<li><p>(8)变量必须加var或者let来声明,不然在变量没赋值之前访问这个变量就报错</p></li>
+</ul>
+
+
+
+<h4 id="2私有作用域">2.私有作用域</h4>
+
+<ul><li><p>在函数执行栈中运行代码，函数中的变量和参数，会默认处理在函数内部，不会被外界所干扰。</p></li>
+<li><p>如果函数内的计算或者逻辑处理需要被外界所接受， 一般使用return。</p></li>
+<li><p>防止全局污染（封闭空间,教科书上说它就是闭包，但是，这样不一定是我们眼中的闭包）</p></li>
+</ul>
+
+
+
+<h4 id="3块级作用域">3.块级作用域</h4>
+
+<ul><li><p>{}</p></li>
+<li><p>let、const 识别块级作用域</p></li>
+<li><p>var不识别</p></li>
+<li><p>要小心function(){}</p></li>
+</ul>
+
+
+
+<h4 id="4作用域链">4.作用域链</h4>
+
+<ul><li><p>1.当前域没有会去它的上级域查找， <br>
+直到window结束，window都没有就报错.</p></li>
+<li><p>2.变量提升</p>
+
+<ul>
+<li><p>当代码在执行前会把var和function提前进行解析</p></li>
+<li><p>并且变量赋值为undefined，函数赋值代码块.</p></li></ul></li>
+<li><p>3.执行上下文</p>
+
+<ul>
+<li><p>我只看等号赋值</p></li></ul></li>
+<li><p>4.如果在函数中，参数赋值比执行上下文要提前(也可以理解为，函数比正常执行多了一个参数赋值)</p></li>
+<li><p>5.赋值参数问题</p>
+
+<ul>
+<li><p>如果实参是简单类型，函数内再怎么搞都不会影响原值</p></li>
+<li><p>如果实参是个引用类型，函数内<em>直接改形参的&amp;&amp;值&amp;&amp;</em>那么会影响原值；</p></li>
+<li><p>但是如果在函数内赋值了一个新的对象，那么此时赋值之后再怎么改参数，都不会影响原值</p></li></ul></li>
+</ul>
+
+
+
+<h3 id="箭头函数">箭头函数</h3>
+
+<ul><li><p>一种函数的简写方式</p>
+
+<ul>
+<li><p>1.let fn = () =&gt; {}   没有参数</p></li>
+<li><p>2.let fn = (a,b,c) =&gt; {} 多个参数</p></li>
+<li><p>3.let fn = a =&gt; {} 一个参数</p></li>
+<li><p>4.let fn = a =&gt; a; return a</p></li></ul></li>
+<li><p>箭头函数的this，跟它的执行上下文有直接的关系。</p></li>
+<li><p>箭头函数的this找老爹。</p></li>
+</ul>
+
+
+
+<h5 id="arguments-实参的集合">arguments 实参的集合</h5>
+
+<p><code>function fn(){ <br>
+    console.log(arguments);//[1,2,3,4,5] <br>
+    } <br>
+fn(1,2,3,4,5)</code>            </p>
+
+<ul><li><p>箭头函数中没有arguments</p></li>
+</ul>
+
+
+
+<h3 id="闭包">闭包</h3>
+
+<ul><li><p>函数形成一个不销毁的作用域，这个作用域就叫闭包</p>
+
+<blockquote>
+  <p>函数套函数，子函数使用父函数的参数或者变量 <br>
+  并且子函数被外界所引用，此时父级形成闭包环境 <br>
+  父级的参数或者变量不被浏览器垃圾回收机制回收. <br>
+  此时，打印父函数的返回值，有个属性为Scopes <br>
+  Scopes下有个closure的属性，closure 就是闭包。</p>
+</blockquote></li>
+<li><p>作用</p>
+
+<ul>
+<li><p>使用闭包可以一直存储父级的参数或者变量 <br>
+不被外界的函数或者变量所干扰（污染）</p></li></ul></li>
+</ul>
+
+
+
+<h2 id="git是个版本控制工具">git：是个版本控制工具</h2>
+
+<ul><li><p>github</p>
+
+<blockquote>
+  <p><a href="https://github.com/" target="_blank">https://github.com/</a> <br>
+  程序员交友网站、进行代码托管、去加入一些知名项目的开发、自己静态的页面…</p>
+</blockquote></li>
+</ul>
+
+
+
+<h4 id="git-与-github进行关联">git 与 github进行关联</h4>
+
+<ul><li><p>设置秘钥:</p>
+
+<ul>
+<li><p>1.进入github</p></li>
+<li><p>2.找到你的头像，点击选择settings       </p></li>
+<li><p>3.在最左边有SSH and GPG keys</p></li></ul></li>
+<li><p>生成秘钥:</p>
+
+<ul>
+<li><p><a href="https://blog.csdn.net/lqlqlq007/article/details/78983879" target="_blank">https://blog.csdn.net/lqlqlq007/article/details/78983879</a></p></li></ul></li>
+<li><p>点击鼠标右键，选择git Bash here</p></li>
+<li><p>输入: ssh-keygen -t rsa -C “这里换上你的邮箱”</p>
+
+<ul>
+<li><p>此处无脑回车，会出现方框</p></li>
+<li><p>git config –global  user.name “这里换上你的用户名”</p></li>
+<li><p>git config –global user.email “这里换上你的邮箱”</p></li>
+<li><p>输入: ssh -T git@github.com </p>
+
+<ul>
+<li><p>只要出现Hi ….就说明绑定成功</p></li>
+<li><p>如果有兴趣，可以自己研究一下hexo搭建自己的博客</p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="git版本控制工具新建控制项目">git:版本控制工具–新建控制项目:</h4>
+
+<ul><li><p>1.git init（第一种）</p></li>
+<li><p>2.到github网站中新建项目  （推荐使用）</p></li>
+<li><p>步骤:                     </p>
+
+<ul>
+<li><p>1.点击头像旁边的 +号 选择 New repository</p></li>
+<li><p>2.填写项目名称、描述、勾选readme、点击创建按钮</p></li>
+<li><p>3.找到clone按钮，点击复制</p></li>
+<li><p>4.在你想管理的文件夹下打开git工具，输入git clone 刚才复制的地址 <br>
+可以使用ctrl+v, shift+insert,点击鼠标右键,选择粘贴</p></li></ul></li>
+<li><p>git status    查看当前你的版本的状态 </p></li>
+<li><p>按方向键上  能够出来刚才输入的命令</p></li>
+<li><p>按tab键可以自动补全文件</p></li>
+</ul>
+
+
+
+<h5 id="工作区到存储区">工作区到存储区:</h5>
+
+<ul><li><p>git add 文件名</p></li>
+<li><p>如果已经输入过一次add，那么可以使用git add .的方式快速 <br>
+把多个文件放到暂存区。</p></li>
+</ul>
+
+
+
+<h5 id="暂存区到版本区">暂存区到版本区:</h5>
+
+<ul><li><p>git commit -m “注释(这个注释是为了方便用户查找)”</p></li>
+</ul>
+
+
+
+<h5 id="快速从工作区提交到版本区">快速从工作区提交到版本区</h5>
+
+<ul><li><p>git commit -a -m “注释”</p></li>
+</ul>
+
+
+
+<h5 id="工作区查看暂存区">工作区查看暂存区:</h5>
+
+<ul><li><p>git diff</p></li>
+</ul>
+
+
+
+<h5 id="暂存区查看版本区">暂存区查看版本区:</h5>
+
+<ul><li><p>git diff –cached</p></li>
+</ul>
+
+
+
+<h5 id="工作区查看版本区">工作区查看版本区:</h5>
+
+<ul><li><p>git diff master</p></li>
+</ul>
+
+
+
+<h5 id="查看版本">查看版本:</h5>
+
+<ul><li><p>git log</p></li>
+</ul>
+
+
+
+<h5 id="如果要看操作过的版本">如果要看操作过的版本:</h5>
+
+<ul><li><p>git reflog</p></li>
+</ul>
+
+
+
+<h5 id="还原版本">还原版本:</h5>
+
+<ul><li><p>git reset –hard 版本号</p>
+
+<ul>
+<li><p>版本号通过查看版本去找</p></li></ul></li>
+<li><p>当代码已经形成版本之后，想把代码提交到远程仓库(github、gitlab、码云…) <br>
+可以使用</p></li>
+<li><p>git push origin master</p></li>
+</ul>
+
+
+
+<h5 id="永久免密上传">永久免密上传:</h5>
+
+<ul><li><p>git config –global credential.helper store</p></li>
+</ul>
+
+
+
+<h3 id="单例模式">单例模式:</h3>
+
+<ul><li><p>单例 — 单独的实例</p></li>
+<li><p>实例:把相同的事务总结(归纳、抽象)出来，形成一类事务，把描述事务的属性和方法具体化，这个具体的描述的对象就是实例</p></li>
+<li><p>命名冲突:</p>
+
+<ul>
+<li><p><strong>1.封闭空间</strong></p>
+
+<blockquote>
+  <p>把一段代码放到一个函数内,当执行函数的时候 <br>
+  函数内的域和外界是互不干扰的 <br>
+  (function(){})()</p>
+</blockquote></li>
+<li><p><strong>2.命名空间</strong></p>
+
+<blockquote>
+  <p>把一些变量或者函数变成某个对象下的属性和方法，对象与对象之间空间地址是不一样的，所以可以解决命名冲突的问题</p>
+</blockquote></li></ul></li>
+<li><p><strong>单例模式的优势:</strong></p></li>
+<li><p>1.解决命名冲突</p></li>
+<li><p>2.把相同事务归为了一类，并且把这些属性或者方法，放到了一个堆内存空间中存储。</p></li>
+<li><p>3.模块化的开发</p></li>
+</ul>
+
+
+
+<h5 id="单例模式功能相对单一用来描述具体一个事务">单例模式功能相对单一,用来描述具体一个事务。</h5>
+
+<ul><li><p>让其复杂，那就需要高级单例模式</p>
+
+<ul>
+<li><p>使用一个函数自执行函数，这个函数返回一个对象</p></li></ul></li>
+<li><p><strong>高级单例模式，可以实现高内聚、低耦合</strong></p></li>
+</ul>
+
+
+
+<h3 id="工厂模式">工厂模式:</h3>
+
+<ul><li><p>目的是批量生成多个实例,</p></li>
+<li><p>通过传参去描述具体的实例,</p></li>
+<li><p>把生产后的对象返回到外界使用。</p></li>
+</ul>
+
+
+
+<h3 id="构造函数">构造函数:</h3>
+
+<blockquote>
+  <p>把属性或者方法挂在this上，然后去new这个函数 <br>
+  浅规则是构造函数首字母大写。 </p>
+</blockquote>
+
+<ul><li><p>new 是一元运算符 -&gt; <strong>专门</strong>运算<strong>函数</strong>的</p></li>
+<li><p><strong>new之后发生了什么？</strong></p>
+
+<ul>
+<li><p>1.执行函数,不使用()调用也是可以执行函数的，此时的()只是为了传参   </p></li>
+<li><p>2.构造函数(fn)中的this指向了当前实例。</p>
+
+<ul>
+<li><p>跟普通函数比较把默认的window转成当前实例 <br>
+<code>function Fn(){}  构造函数 <br>
+fn{}  实例化对象</code>           </p></li></ul></li>
+<li><p>3.return 的结果默认指向当前实例this,</p>
+
+<blockquote>
+  <p>有return 如果后面跟着的是一个基本类型 <br>
+  结果依然是实例,如果后面跟着的是一个引用 <br>
+  类型，那么结果就是这个return后的引用类型</p>
+</blockquote></li></ul></li>
+</ul>
+
+
+
+<h4 id="constructor构造函数">constructor：构造函数</h4>
+
+<ul><li><p>实例下的constructor == 实例的构造函数</p>
+
+<ul>
+<li><p>但是这个constructor是随时随地随便可以修改的，constructor只能当作实例中指向构造函数的一种参考物，并不能左右实例的构造函数真相。</p></li></ul></li>
+<li><p>constructor什么时候会被修改？</p>
+
+<ul>
+<li><p>给构造函数的原型赋址对象的时候会变</p></li></ul></li>
+<li><p>解决：</p>
+
+<ul>
+<li><p>手动修正constructor指向 <br>
+   <code>{ <br>
+        constructor：构造函数 <br>
+    }</code></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="面向对象编程">面向对象编程:</h3>
+
+<blockquote>
+  <p>把描述相同的事务抽象出来，归为一类，把描述这个类的属性和方法挂在这个类的原型(prototype)上的一种编程方式就叫面向对象</p>
+  
+  <ul><li><p>抽象:抽离出长的相像的部分。</p></li>
+  <li><p>js的面向对象有特征: <br>
+          抽象 <br>
+          封装 <br>
+          继承 <br>
+          多态</p></li>
+  <li><p>类 -&gt; 构造函数 -&gt; 把相同的代码抽离出来归纳在一个函数中</p></li>
+  </ul>
+  
+  </blockquote>
+
+
+<h4 id="原型">原型：</h4>
+
+<blockquote>
+  <p><strong>定义：</strong>原型是函数的一个属性prototype（当声明一个函数的时候自身带有的一个属性，这个属性一般只给它的实例化对象使用）</p>
+</blockquote>
+
+<p><code>原型：prototype为 一个函数天生自带的属性，它的值是一个对象 <br>
+为了优化性能的，prototype只给它的实例化对象使用 <br>
+如果在相同的类中去new多个实例，它们的方法是相等的</code></p>
+
+<ul><li><p>它的用处是如果实例化对象上没有某个属性或者方法，还会去这个实例化对象的构造函数中的原型下去查找，该属性或者方法.</p></li>
+<li><p>如果构造函数的原型上没有这个方法，那么还会去原型下的原型链（<strong>proto</strong>）中查找，找到Object.prototype</p></li>
+<li><p>构造函数的原型下的方法只给它的实例化对象使用</p></li>
+<li><p>以构造函数模式 + 原型模式 = js面向对象模式</p></li>
+<li><p><strong>调用原型上的方法</strong></p>
+
+<ul>
+<li><p>Fn.prototype.say</p></li>
+<li><p>new Fn.say()</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="原型链-proto">原型链: <strong><em>_proto_</em></strong></h4>
+
+<blockquote>
+  <p><strong>定义：</strong>实例身上都有的一个属性<strong><em>_proto_</em></strong>，这个属性指向构造函数的原型； <br>
+   <strong>实例化对象上的原型链 === 构造函数的原型</strong>； <br>
+   实例对象上没有，就会通过原型链找到构造函数的原型； <br>
+   构造函数的原型又是一个对象，如果在这个对象下还没有；还会通过构造函数的原型的原型链进行查找，最后直到找到Oject.prototype为止。</p>
+</blockquote>
+
+<ul><li><p><strong>实例上一定有原型链</strong></p></li>
+<li><p><strong>实例化对象上的原型链 === 构造函数的原型</strong></p>
+
+<ul>
+<li><p>实例化对象.<strong><em>_proto_</em></strong> === 构造函数.prototype</p></li></ul></li>
+<li><p><strong>对象上有原型链 -&gt; 指向构造函数的原型</strong></p>
+
+<blockquote>
+  <p>1.先看对象自身有没有这个属性或者方法 <br>
+  有就不找了 <br>
+  没有的话就接着找 <br>
+  2.通过对象的原型链找构造函数的原型 <br>
+  有就不找了 <br>
+  没有的话就接着找 <br>
+  3.因为函数的原型是个对象，对象身上有原型链，通过原型链又去找构造函数原型 <br>
+  有就不找了 <br>
+  没有的话就接着找</p>
+</blockquote></li>
+<li><p>所以说，函数即是函数，又是对象(它是Function的实例化对象) <br>
+    函数即有原型，也有原型链，函数的原型上的属性或者方法只给它的 <br>
+    实例化对象使用。</p></li>
+</ul>
+
+
+
+<h5 id="function的三种形态">function的三种形态</h5>
+
+<ul><li><p><strong>普通函数</strong> <br>
+<code>function fn(){}</code></p></li>
+<li><p><strong>构造函数</strong>（类）构造对象的函数 得使用new <br>
+<code>function Fn(name){ <br>
+                this.name = name; <br>
+            }</code>                </p></li>
+<li><p><strong>实例化对象</strong>  new Function的实例化对象 <br>
+<code>let fn = new Function();</code>       </p></li>
+</ul>
+
+
+
+<h3 id="this的指向">this的指向</h3>
+
+<ul><li><p><strong>window:</strong></p>
+
+<ul>
+<li><p>1.直接在全局输出this</p></li>
+<li><p>2.函数打印this,并且直接调用</p></li>
+<li><p>3.定时器中普通函数this为window</p></li>
+<li><p>4.匿名函数自执行</p></li></ul></li>
+<li><p><strong>事件中的this:</strong></p>
+
+<ul>
+<li><p>哪个对象触发，this就是那个对象</p></li>
+<li><p>事件中尽量不用箭头函数，按钮会找不到，体验不好</p></li></ul></li>
+<li><p><strong>实例:</strong></p>
+
+<ul>
+<li><p>new 构造函数 -&gt; this就是实例</p></li></ul></li>
+<li><p><strong>箭头函数:</strong></p>
+
+<ul>
+<li><p>this就走定义箭头函数的域</p></li>
+<li><p>箭头函数不能new，一new就报错</p></li>
+<li><p>箭头函数也没有arguments</p></li></ul></li>
+<li><p><strong>对象中的this</strong></p>
+
+<ul>
+<li><p>let obj = {fn:function(){console.log(this)}}     </p></li></ul></li>
+</ul>
+
+
+
+<h3 id="修改this指向的方法">修改this指向的方法</h3>
+
+<blockquote>
+  <p>一个函数，天生就自带一些属性和方法 <br>
+  其中有：</p>
+</blockquote>
+
+<ul><li><p>1、<strong>call():</strong></p>
+
+<ul>
+<li><p>有无数的参数</p></li>
+<li><p>第一个参数：改变this指向（写啥是啥）</p>
+
+<ul>
+<li><p>null undefined为window</p></li></ul></li>
+<li><p>第二个参数之后：就是实参</p></li></ul></li>
+<li><p>2、<strong>apply():</strong></p>
+
+<ul>
+<li><p>有2个参数</p></li>
+<li><p>第一个参数:改变this指向（写啥是啥）</p>
+
+<ul>
+<li><p>null和undefined为window</p></li></ul></li>
+<li><p>第二个参数：数组[1,2,3]，数组中放参数</p></li></ul></li>
+<li><p>3、<strong>bind():</strong></p>
+
+<ul>
+<li><p>有无数个参数</p></li>
+<li><p>第一个参数：改变this指向（写啥是啥）</p>
+
+<ul>
+<li><p>null和undefined为window</p></li></ul></li>
+<li><p>第二个参数之后：就是实参</p>
+
+<blockquote>
+  <p>使用bind不能立马执行函数，会返回一个新函数，这个函数 的this是改变了的，得执行这个新函数才能输出代码。</p>
+</blockquote></li></ul></li>
+<li><p><strong>Object.prototype.toString.call(arr)</strong></p>
+
+<ul>
+<li><p>每个数据类型都有自己的toString方法</p></li>
+<li><p>每个toString方法都不一样</p></li>
+<li><p>正好Object的toString方法能够显示当前的数据类型</p></li></ul></li>
+<li><p><strong>类数组转数组的方法:</strong></p>
+
+<ul>
+<li><p>Array.prototype.slice.call(arr);</p></li>
+<li><p>Array.form(arr);</p></li></ul></li>
+<li><p><strong>取数组大小值:</strong></p>
+
+<ul>
+<li><p>console.log(Math.max.apply(null,ary));</p></li>
+<li><p>console.log(Math.max(…ary))</p></li></ul></li>
+</ul>
+
+<p><code>function fn(){ <br>
+    console.log(this); <br>
+} <br>
+fn.call('你的');</code></p>
+
+
+
+<h3 id="包装对象">包装对象：</h3>
+
+<blockquote>
+  <p>定义：当简单类型去使用某个属性或者方法的时候，内部会偷偷地转成对象（new 内置类）把属性或者方法提供使用者，然后再悄悄的销毁，这个过程就叫包装对象。</p>
+</blockquote>
+
+<ul><li><p><strong>只有在引用类型下才能添加属性和方法</strong></p></li>
+</ul>
+
+
+
+<h3 id="自身属性">自身属性</h3>
+
+<blockquote>
+  <p>obj.hasOwnProperty(‘属性名’)</p>
+</blockquote>
+
+<ul><li><p>for in不但会枚举本对象，还会枚举原型，此时就好多出来一些莫名其妙的东西，但是我们不想要不是对象身上的东西</p></li>
+<li><p>obj.hasOwnProperty(‘属性名’)</p>
+
+<ul>
+<li><p>查看某个属性是不是对象自身的</p></li>
+<li><p>是就返回true，不是就返回false</p></li></ul></li>
+</ul>
+
+
+
+<h3 id="json方法">JSON方法</h3>
+
+<ul><li><p>JSON -&gt; [] | {}</p>
+
+<blockquote>
+  <p>JSON 只是一种数据格式     ‘{}’  |  ‘[]’</p>
+</blockquote>
+
+<ul>
+<li><p><strong>JSON.parse()</strong></p>
+
+<ul>
+<li><p>能够把json转成对象或者数组</p></li>
+<li><p>json必须是一个标准格式的json,不然转不出来</p></li>
+<li><p>json中不能放函数、不能为undefined <br>
+<code>'{"name":12,"nn":"ds"}'</code></p></li></ul></li>
+<li><p><strong>JSON.stringify()</strong></p>
+
+<ul>
+<li><p>把对象或者数组转成json</p></li>
+<li><p>对象中不能放函数、不能为undefined <br>
+<code>JSON.parse(JSON.stringify(arr)); 深拷贝：先把数组或者对象转成字符串，再转成数组或对象，这样就不是同一个地址</code></p></li></ul></li>
+<li><p>低版本可以使用<strong>json2.js</strong></p></li>
+<li><p><strong>eval</strong> 能够把字符串尽量转成js能执行的代码。 <br>
+<code>new Function('','console.log()')</code></p></li></ul></li>
+<li><p><strong>请求JSON</strong> <br>
+    <code>fetch(url) url-&gt; 文件路径 <br>
+    .then(d=&gt;d.text()) <br>
+    .then(arr=&gt;{ <br>
+        //arr = eval('('+arr+')'); <br>
+        console.log(arr); <br>
+    })</code></p></li>
+</ul>
+
+
+
+<h3 id="继承">继承:</h3>
+
+<blockquote>
+  <p>子类继承了父类的一些特征，然后自己还有一套自己的特征</p>
+</blockquote>
+
+<ul><li><p>为什么要继承：</p>
+
+<ul>
+<li><p>就是为了代码能够更好复用，组合起来生成一个新的类别</p></li></ul></li>
+<li><p><strong>属性继承：类式继承(构造函数继承)</strong></p>
+
+<ul>
+<li><p>把父类看做一个函数，调用这个父类并且通过call去改变this指向，把指向改为子类。</p></li>
+<li><p><code>function Child(){ <br>
+Parent.call(this) <br>
+}</code></p></li>
+<li><p>class式 <br>
+<code>class Child extends Parent {}</code></p></li></ul></li>
+<li><p><strong>方法继承：</strong> </p>
+
+<ul>
+<li><p>扩展式继承</p>
+
+<ul>
+<li><p>{…父类原型} <br>
+<code>child.prototype={...Parent.prototype}</code></p></li></ul></li>
+<li><p>拷贝继承                  </p>
+
+<blockquote>
+  <p>一、<strong>浅拷贝定义：</strong>一个引用类型赋值的时候，只赋值第一层的简单类型，这样两个空间地址不一样，改变一个空间的属性是不会影响另一个空间地址的属性的; <br>
+  把一个对象中的第一层的简单类型赋值给另一个对象</p>
+</blockquote>
+
+<ul>
+<li><p><strong>child.prototype = Object.assgin(parent.prototype)</strong> <br>
+<code>let obj2 = Object.assgin(obj) <br>
+let obj2 = {...obj} <br>
+for(let attr in obj){ <br>
+obj2[attr] = obj[attr]; <br>
+}</code></p>
+
+<ul>
+<li><p>对象的属性只能有一个，如果写多个，下面的会把上面的覆盖</p></li>
+<li><p>Object.assign(对象1,对象2,对象3….)</p></li>
+<li><p>从后往前合并，改变第一个对象，第一个对象可以为{} <br>
+<code>Child.prototype = Object.assign({},parent.prototype)</code> <br>
+<code>console.log(Object.assign({},obj,obj2,obj3));</code> </p></li></ul></li></ul>
+
+<blockquote>
+  <p>二、<strong>深拷贝定义：</strong>把一个对象中的第一层有引用类型，那么赋值的时候改变一个会影响另一个（因为赋值的过程还是赋值地址），需要只要发现引用类型就深入到内部去找简单类型，直到对象中的所有属性都是简单类型为止。</p>
+</blockquote>
+
+<ul>
+<li><p><strong>child.prototype=deepclone (Parent.prototype)深度克隆（深拷贝）</strong> <br>
+<code>function deepClone(obj) { <br>
+//先声明一个数组，去存克隆出来的内容 <br>
+//判断obj是否为数组，是数组就o就为[],否则为{} <br>
+let o = obj.push ? [] : {}; <br>
+//循环传进来的对象 <br>
+for (let attr in obj) { <br>
+// for(let i=0;i&lt;arr.length;i++){ <br>
+//判断对象中的某个值是否为引用类型 <br>
+//如果是，就继续调用deepClone把引用值传到函数中 <br>
+if (obj.hasOwnProperty(attr)) { <br>
+if (typeof obj[attr] === 'object') { <br>
+ o[attr] = deepClone(obj[attr]) <br>
+} else { <br>
+//如果是简单类型就直接赋值 <br>
+ o[attr] = obj[attr]; <br>
+} <br>
+} <br>
+} <br>
+return o; <br>
+} <br>
+let arr2 = deepClone(arr); <br>
+console.log(arr2);</code></p></li></ul></li></ul></li>
+<li><p><strong>原型继承</strong></p>
+
+<ul>
+<li><p>例： <br>
+<code>function Ph(){ <br>
+Ph.prototype=Fruit.prototype; <br>
+Coconut.prototype=new Ph; <br>
+}</code></p></li></ul></li>
+<li><p><strong>寄生式继承</strong></p>
+
+<ul>
+<li><p>child.prototype = Object.create(parent.prototype)</p>
+
+<blockquote>
+  <p>必须传入一个对象 <br>
+  返回值为一个新的对象，这个对象的原型链指向传入的参数</p>
+</blockquote>
+
+<ul>
+<li><p>就是把对象中的方法挂在新对象的原型链上，括号中的对象变成了新的对象，而这个对象的原型链指向构造函数的原型；</p></li>
+<li><p>这个构造函数是传递进来的那个。 <br>
+<code>Coder.prototype=Object.create(Person.prototype);</code> <br>
+<code>Coder子类  Person父类</code></p></li></ul></li></ul></li>
+</ul>
+
+
+
+<h4 id="class继承常用"><strong>class继承</strong>–常用</h4>
+
+<ul><li><p>class (类) 保留字</p></li>
+<li><p>let   关键字</p>
+
+<blockquote>
+  <p>class是ES6才出来的新语法，优势就是写起来方便；它其实还是之前构造函数的语法糖  <br>
+  <code>https://segmentfault.com/a/1190000010159725</code></p>
+</blockquote></li>
+<li><p>class 类名 {  }</p></li>
+<li><p>使用constructor去接收参数 <br>
+<code>constructor(a,b){ super下面才能写this，不然就报错,super括号中传入父类使用的参数}</code></p></li>
+<li><p>class Cat extends Animal 继承用<strong>extends </strong></p></li>
+<li><p>写方法: 直接在类中</p>
+
+<ul>
+<li><p>方法名 () {  }</p></li></ul></li>
+<li><p>设置静态方法</p>
+
+<ul>
+<li><p><code>static shui(){  }</code></p></li></ul></li>
+</ul>
+
+
+
+<h4 id="三点">三点…</h4>
+
+<p><strong>… </strong></p>
+
+<ul><li><p>1.扩展运算符 <br>
+<code>let arr = [1,2,3,4]; <br>
+console.log(...arr); <br>
+function fn(){ <br>
+console.log(arguments); //...[] <br>
+function f(a,b){ <br>
+console.log(a,b); <br>
+} <br>
+f(...arguments); <br>
+} <br>
+fn(1,2);</code></p></li>
+<li><p>2.剩余运算符 <br>
+<code>...c 是个数组 <br>
+function fn(a,...c){ <br>
+console.log(a,c); <br>
+} <br>
+fn(1,2,3,4,5);</code></p>
+
+<ul>
+<li><p>扩展运算符和剩余运算符的应用 <br>
+<code>class Person { <br>
+constructor(name,age) { <br>
+    this.name = name; <br>
+    this.age = age; <br>
+} <br>
+} <br>
+class Women extends Person { <br>
+constructor(fs,...arg) {  //剩余运算符 <br>
+    super(...arg);   //扩展运算符 <br>
+    console.log(arg) <br>
+    this.sex = '女'; <br>
+    this.fushi = fs; <br>
+} <br>
+} <br>
+let w = new Women('爱穿裙子','马骅骏',18); <br>
+console.log(w);</code></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="正则">正则</h3>
+
+<ul><li><p><strong>正则(对象)：</strong></p>
+
+<blockquote>
+  <p><strong>概念：专门用来检索（检查、搜索）模糊范围字符串的一种规则。</strong> <br>
+  特征： <br>
+  懒惰性：\d 让它找一个一定不会找第二个 <br>
+  贪婪性：\d+ 有多少就尽量匹配多少</p>
+</blockquote></li>
+<li><p><strong>简写</strong>：<strong>/ 不带引号的字符串 /</strong> -&gt; /a/ 找字符串’a’</p></li>
+<li><p><strong>实例化</strong>：<strong>new RegExp(‘字符串’,’修饰符’)</strong>，里面可以放变量，返回的是正则    </p>
+
+<ul>
+<li><p><code>例：new RegExp('\\b'+ sCLASS +'\\b'); // \b是边界符，前面再加\是转义</code></p></li></ul></li>
+<li><p><strong>正则的方法：</strong></p>
+
+<ul>
+<li><p><strong>exec[Ig’zek]：/规则/.exec(字符串)</strong>，找到正则中第一个匹配的字符，并且放到数组中。</p>
+
+<ul>
+<li><p>捕获一项</p></li>
+<li><p>[字符、index、input、groups]</p></li></ul></li>
+<li><p><strong>test[test]：/规则/.test(字符串)</strong></p>
+
+<ul>
+<li><p>检测正则中的规则是否匹配字符串，成立就返回true，否则false</p></li></ul></li></ul></li>
+<li><p><strong>字符串用正则的方法：</strong></p>
+
+<ul>
+<li><p><strong>string.match(/正则/)  捕获一项或多项</strong> </p>
+
+<ul>
+<li><p>找到正则中所有匹配的字符且放到数组中。</p></li>
+<li><p>没匹配到就是null <br>
+<code>let str = 'x1j89321Xeu218nX2d32'; <br>
+//全局查找整个字符串，把为数字的存在数组中 <br>
+console.log(str.match(/\d/g)); <br>
+// 全局查找整个字符串，把一个数字或者连续多个数字的存在数组中 <br>
+console.log(str.match(/\d+/g));</code></p></li></ul></li>
+<li><p><strong>string.replace(要替换的字符串 || /正则/，替换成什么 || 函数);</strong></p>
+
+<ul>
+<li><p>当第二个参数为函数的时候</p></li>
+<li><p>默认情况:</p>
+
+<ul>
+<li><p>函数的第一个参数就是每次匹配到的结果；</p></li>
+<li><p>函数的第二个参数是index，也就是索引</p></li>
+<li><p>函数的第三个参数input，也就是所有项</p></li>
+<li><p>函数的第四个(及以后)参数都是undefined  </p></li></ul></li>
+<li><p>此函数必须要有return，不然就是undefined</p></li>
+<li><p>返回为新的字符串</p></li></ul></li></ul></li>
+<li><p><strong>修饰符：</strong></p>
+
+<ul>
+<li><p><strong>g</strong> -&gt; global  全局</p></li>
+<li><p><strong>i</strong> -&gt; ignore case 忽略大小写</p></li>
+<li><p><strong>m</strong> -&gt; 多行匹配     </p></li></ul></li>
+<li><p><strong>量词 </strong>： <strong>+</strong> 最少1个最多无限</p></li>
+<li><p><strong>“.” -&gt; 任意一个字符，除回车(\r)</strong></p></li>
+<li><p><strong>“ \”  转义符：需要注意的是在写 “ \” 记得转义，在字符串中需要转义</strong></p></li>
+<li><p><strong>元字符：</strong></p>
+
+<blockquote>
+  <p>当 “ \ + 字母 ” 的时候会有特殊含义，这种带有特殊含义的，我们叫<strong>元字符</strong>。</p>
+</blockquote>
+
+<ul>
+<li><p><strong>\n 换行</strong></p></li>
+<li><p><strong>\r  回车</strong><code>“\r\n 回车并换行”</code></p></li>
+<li><p><strong>\d  一个数字</strong></p></li>
+<li><p><strong>\D 一个非数字(不是数字)</strong></p></li>
+<li><p><strong>\s  一个空格</strong></p></li>
+<li><p><strong>\S 一个非空格</strong></p></li>
+<li><p><strong>\w 一个数字、字母、下划线</strong></p></li>
+<li><p><strong>\W 一个非数字、字母、下划线</strong></p></li>
+<li><p><strong>\b 一个边界符</strong></p></li>
+<li><p><strong>\B 一个非边界符</strong></p></li></ul></li>
+<li><p><strong>“ | ”或者</strong></p></li>
+<li><p><strong>( )小括号</strong></p>
+
+<ul>
+<li><p>1.<strong>( ) 提权</strong> (1+1)*1</p></li>
+<li><p>2.<strong>( ) 子项</strong>： 能够在一个规则中提取某些(指定)字符</p>
+
+<blockquote>
+  <p>子项如果包了一个规则，在规则之后有量词，那么结果为最后一个</p>
+  
+  <ul>
+  <li><p>比如： <br>
+  <code>let str='2019' <br>
+  (\d)+ -&gt;  找到的数字不是2是9</code>    </p></li></ul>
+</blockquote>
+
+<ul>
+<li><p>子项的顺序是从左往右数的，每有一个()就是一个子项</p></li>
+<li><p>子项的个数代表着形参的个数(从第二个开始计算)</p></li>
+<li><p>从第二个参数起子项与形参一一对应 <br>
+<code>let str = '2019----4/-/-/-//26';  //2019年4月26日 <br>
+let s = str.replace(/(\d+)\D+(\d+)\D+(\d+)/,function(<span class="mathjax-replacement" rel="d9f29a7376b88cf1b46c705218a662dd">$0,$</span>1,<span class="mathjax-replacement" rel="bcfac7709c36a0b8e2bde3f6ecb3adf7">$2,$</span>3){ <br>
+    // console.log($3);  <br>
+    return <span class="mathjax-replacement" rel="1e67a8c07c6aed8552f89666fb41bf78">$1 + '年' + $</span>2 + '月' + $3 + '日'; <br>
+}); <br>
+console.log(s);</code></p></li></ul></li></ul></li>
+<li><p><strong>子项重复项：</strong></p>
+
+<blockquote>
+  <ul>
+  <li><p>比如：<code>/(d1)c1(b1)\1\2/</code> <br>
+  当前有2个子项，一个是d1另一个是b1 <br>
+  \1就代表第一个子项，\2就代表第二个子项</p></li></ul>
+</blockquote>
+
+<p><code>let str = '437826357384623537463363726573384633278467382'; <br>
+let min = -Infinity; <br>
+    let i; <br>
+    //把字符串变成有序的 <br>
+    str = str.split('').sort().join(''); <br>
+    // console.log(str); <br>
+  //比较大小  <span class="mathjax-replacement" rel="8bdff0fe99d7c72fc90529f31f79cf4b">$0就是当前匹配的 , $</span>1 子项 <br>
+  str.replace(/(\d)\1+/g,(<span class="mathjax-replacement" rel="d9f29a7376b88cf1b46c705218a662dd">$0,$</span>1)=&gt;{ <br>
+      if(min &lt; $0.length){ <br>
+          min = $0.length;//求出多少次 <br>
+          i = $1;// 它是谁 <br>
+      } <br>
+  }); <br>
+console.log(min,i);</code></p></li>
+<li><p>解题思路：</p>
+
+<blockquote>
+  <p>比如：[].push()  <br>
+  这个方法是什么 （Array的方法） <br>
+  有什么用，（用来向数组的最后一为添加一个或者多个数据） <br>
+  参数传的是什么(至少是一个数据，也可以是多个数据) <br>
+  返回值是什么(新数组的长度)</p>
+</blockquote></li>
+<li><p><strong>[ ] 中括号 </strong>：例：[ab]要么是a，要么是b</p>
+
+<ul>
+<li><p>在中括号中任意选择一个字符</p>
+
+<ul>
+<li><p>比如:[12345] 可以为1也可以为2也可以为3…</p></li>
+<li><p>也可以简写为[1-5],因为 - 是1到5的意思</p></li></ul></li>
+<li><p>为什么能那么写呢？</p>
+
+<ul>
+<li><p>因为顺序是按照unicode编码来的</p>
+
+<ul>
+<li><p><strong>数字是：[0-9]</strong></p></li>
+<li><p><strong>小写英文：[a-z]</strong></p></li>
+<li><p><strong>大写英文：[A-Z]</strong></p></li>
+<li><p><strong>从大A到小z： [A-Za-z]</strong></p></li>
+<li><p><strong>中文区间范围 ：[\u4e00-\u9fa5]</strong>  <br>
+<code>let str = 'hello!~张欢,您老贵庚?'; //21 <br>
+let num = 0; <br>
+for(let i=0;i&lt;str.length;i++){ <br>
+if(/[\u4e00-\u9fa5]/.test(str[i])){ <br>
+num += 2; <br>
+}else{ <br>
+num ++ <br>
+} <br>
+} <br>
+console.log(num);</code></p></li></ul></li></ul></li></ul></li>
+<li><p><strong>^ 开头、非</strong></p>
+
+<ul>
+<li><p>开头：<code>/^\d/</code></p></li>
+<li><p>排除：<code>[^3465] 排除3465</code></p></li></ul></li>
+<li><p><strong>$ 结尾</strong> <br>
+<code>let str = '180'; <br>
+str.match(/^1[89]$/)</code></p>
+
+<blockquote>
+  <p>意义：<strong>整段字符串</strong>是否都满足正则的规则，而不是字符串中有一段匹配正则的规则就返回</p>
+</blockquote></li>
+<li><p><strong>{ } 范围</strong></p>
+
+<ul>
+<li><p><strong>{n,m}：最小n次，最大m次</strong></p></li>
+<li><p><strong>{n}：最大是n，最小也是n</strong></p></li>
+<li><p><strong>+ -&gt; {1,}：最小一次，最多无限</strong></p></li>
+<li><p><strong>？ -&gt; {0,1}：最小0次，最多1次</strong></p></li>
+<li><p><strong>“ * ” -&gt; {0, }：最小0次，最多无限次</strong> <br>
+<code>1、qq:首字母不能是0，全部都要是数字，最小5位,最多11位  -&gt;    /^[1-9]\d{4,10}$/</code> <br>
+<code>2、手机号:1[3456789]\d{9}</code></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="盒子模型">盒子模型</h3>
+
+
+
+<h4 id="计算后的样式">计算后的样式：</h4>
+
+<ul><li><p><strong>getComputedStyle(element).属性</strong></p>
+
+<ul>
+<li><p>获取到的结果为<strong>带单位</strong>的字符串，比如:100px</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="获取宽高">获取宽高：</h4>
+
+<ul><li><p><strong>ele.clientWidth/ele.clientHeight</strong></p>
+
+<ul>
+<li><p>支持padding，不包含边框</p></li>
+<li><p>元素可视区宽度 ，不带单位的数字</p></li>
+<li><p>如果设置一个固定值，就以固定值为依据显示，不会以被内容撑开显示</p></li></ul></li>
+<li><p><strong>ele.offsetWidth/ele.offsetHeight</strong></p>
+
+<ul>
+<li><p>支持padding，也包含边框，不带单位的数字</p></li>
+<li><p>如果设置一个固定值，就以固定值为依据显示，不会以被内容撑开显示</p></li></ul></li>
+<li><p><strong>ele.scrollHeight/ele.scrollWidth</strong></p>
+
+<ul>
+<li><p>被内容撑开的高度（不包含边框）</p></li>
+<li><p>不管设不设置固定样式，都以被内容撑开为显示结果。</p></li></ul></li>
+</ul>
+
+
+
+<h4 id="距离">距离</h4>
+
+<ul><li><p><strong>offsetParent</strong></p>
+
+<ul>
+<li><p>定位父级，没有定位父级走body</p></li></ul></li>
+<li><p><strong>offsetLeft</strong></p>
+
+<ul>
+<li><p>当前元素（左外边框）到定位父级的（左内边框）距离</p></li>
+<li><p>获取的是不带单位的数字。 </p></li></ul></li>
+<li><p><strong>offsetTop</strong></p>
+
+<ul>
+<li><p>当前元素（上外边框）到定位父级的（上内边框）距离</p></li>
+<li><p>获取的是不带单位的数字。 </p></li></ul></li>
+</ul>
+
+<blockquote>
+  <p>如果要使用上面的属性，一定要做到以下几点: <br>
+  1.子级有绝对定位 <br>
+   2.定位父级也一定要有定位 <br>
+  3.子级和父级都要有宽高（触发haslayout，zoom:1）</p>
+</blockquote>
+
+
+
+<h4 id="绝对位置当前元素到页面顶端的位置">绝对位置：当前元素到页面顶端的位置。</h4>
+
+<ul><li><p><strong>clientLeft/clientTop  边框尺寸</strong></p></li>
+<li><p><strong>getComputedStyle(box3).borderTopWidth  边框尺寸</strong></p></li>
+<li><p><strong>getBoundingClientRect( )  当前元素到页面可视区的尺寸、距离</strong></p>
+
+<ul>
+<li><p>width/height/left/right/top/bottom/x/y</p></li>
+<li><p><strong>注意：是跟滚动条走的。</strong></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="bombrowser-object-model-浏览器对象模型">BOM:Browser Object Model  浏览器对象模型</h3>
+
+<ul><li><p>获取浏览器的尺寸</p>
+
+<ul>
+<li><p><strong>window.innerWidth/window.innerHeight</strong></p>
+
+<blockquote>
+  <p>注意: <br>
+  window.innerWidth||window.innerHeight如果有滚动条，是忽略了滚动条的尺寸的  1280 <br>
+  document.body.clientWidth(浏览器的尺寸,排除滚动条的) ，使用的时候把默认样式清除  1263</p>
+</blockquote></li></ul></li>
+<li><p><strong>window.open(url,用什么方式打开_blank,_self)</strong></p>
+
+<ul>
+<li><p>打开新的窗口</p>
+
+<blockquote>
+  <p>注意：需要用户主动触发才不会被拦截 <br>
+  <code>比如： window.open('http://www.baidu.com')</code></p>
+</blockquote></li></ul></li>
+<li><p><strong>window.close( );</strong></p>
+
+<ul>
+<li><p>关闭浏览器窗口，最好也是用户主动触发体验才好</p></li></ul></li>
+<li><p><strong>window.pageYOffset/window.pageXOffset</strong></p>
+
+<ul>
+<li><p>滚动条的距离，只能读不能写</p></li></ul></li>
+<li><p><strong>window.scrollTo(x,y) </strong></p>
+
+<ul>
+<li><p>专门用来写滚动条距离的</p></li></ul></li>
+<li><p><strong>document.documentElement.scrollTop</strong></p>
+
+<ul>
+<li><p>滚动条的距离，既能读也能写(document.documentElement=HTML)</p></li></ul></li>
+<li><p><strong>window.onresize  缩放浏览器的时候触发的事件</strong></p></li>
+<li><p><strong>window.onscroll  有滚动条的时候滚轮时触发</strong></p></li>
+<li><p><strong>window.navigator.userAgent  查看用户的浏览器内核信息</strong></p>
+
+<ul>
+<li><p>注意：使用的时候判断的字符串有可能会被模拟。</p></li>
+<li><p>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36</p></li>
+<li><p>操作系统的版本，位数</p></li></ul></li>
+<li><p><strong>window.location.href   在当前页面中跳转页面</strong></p></li>
+</ul>
+
+
+
+<h4 id="浏览器地址信息">浏览器地址信息</h4>
+
+<ul><li><p><strong>hash: “”</strong>  浏览器hash信息 #之后的信息，更换这个信息是不会刷新页面的</p></li>
+<li><p><strong>window.location.hash</strong> 即能读也能写</p></li>
+<li><p><strong>host: “”</strong>  ip地址 + 端口号</p></li>
+<li><p><strong>hostname: “”</strong> ip地址</p></li>
+<li><p><strong>href: “”</strong>  url</p></li>
+<li><p><strong>origin: “file://”</strong></p></li>
+<li><p><strong>port: “”</strong> 端口</p></li>
+<li><p><strong>protocol: “file:”</strong>  协议</p></li>
+<li><p><strong>reload: ƒ reload()</strong>   刷新页面</p></li>
+<li><p><strong>replace: ƒ ()</strong> 替换页面</p></li>
+<li><p><strong>search: “”</strong>  查询信息</p>
+
+<ul>
+<li><p>window.location.search</p></li>
+<li><p>?到#号之间的信息</p></li>
+<li><p>即可读也可写，只不过写的时候会刷新页面 <br>
+<code>http://www.zhufengpeixun.cn?num=1#page=0</code></p></li></ul></li>
+<li><p><strong>window.onhashchange</strong>   当hash值发生变化的时候就触发 <br>
+<code>window.onhashchange = function(){ <br>
+    alert('触发'); <br>
+}</code></p></li>
+<li><p><strong>window.location.reload( )</strong>  刷新页面</p></li>
+</ul>
+
+
+
+<h4 id="延迟加载">延迟加载</h4>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-comment">//工具中的绝对位置</span>
+</div><div class="hljs-line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tools</span> </span>{
+</div><div class="hljs-line">po(ele){
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> obj = ele,
+</div><div class="hljs-line">top = <span class="hljs-number">0</span>,left = <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">while</span>(obj){
+</div><div class="hljs-line"> top += obj.offsetTop;
+</div><div class="hljs-line"> left += obj.offsetLeft;
+</div><div class="hljs-line"> obj = obj.offsetParent;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">top -= ele.clientTop;
+</div><div class="hljs-line">left -= ele.clientLeft;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-comment">//new Tools().po(ele).l</span>
+</div><div class="hljs-line"><span class="hljs-keyword">return</span> {
+</div><div class="hljs-line"> top,
+</div><div class="hljs-line"> left
+</div><div class="hljs-line">}
+</div><div class="hljs-line">}
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-comment">//实例化Tools</span>
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> t = <span class="hljs-keyword">new</span> Tools();
+</div><div class="hljs-line"><span class="hljs-comment">//可视区的高度</span>
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> winH = <span class="hljs-built_in">window</span>.innerHeight;
+</div><div class="hljs-line"><span class="hljs-comment">//获取页面中所有li和img</span>
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> lis = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'li'</span>);
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> img = <span class="hljs-built_in">document</span>.querySelectorAll(<span class="hljs-string">'img'</span>);
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">scrollPic();
+</div><div class="hljs-line"><span class="hljs-comment">//当滚轮的时候触发</span>
+</div><div class="hljs-line"><span class="hljs-built_in">window</span>.onscroll = scrollPic;
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">scrollPic</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line"><span class="hljs-comment">//滚轮事件</span>
+</div><div class="hljs-line"><span class="hljs-comment">//拿到滚动条的距离</span>
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> scrollT = <span class="hljs-built_in">window</span>.pageYOffset;
+</div><div class="hljs-line"><span class="hljs-comment">//循环每个li。</span>
+</div><div class="hljs-line"><span class="hljs-comment">//看一看滚动条的距离 + 可视区的高度</span>
+</div><div class="hljs-line"><span class="hljs-comment">//是否大于等于每个li的绝对Top位置</span>
+</div><div class="hljs-line"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i=<span class="hljs-number">0</span>;i&lt;lis.length;i++){
+</div><div class="hljs-line"><span class="hljs-keyword">if</span>(scrollT + winH &gt;= t.po(lis[i]).top){
+</div><div class="hljs-line"> <span class="hljs-comment">//如果是那么就把图片的pic中的路径取出来</span>
+</div><div class="hljs-line"> <span class="hljs-comment">//赋值给img的src</span>
+</div><div class="hljs-line"> <span class="hljs-keyword">if</span>(!img[i].src){
+</div><div class="hljs-line">     <span class="hljs-comment">// console.log(i);</span>
+</div><div class="hljs-line">     <span class="hljs-comment">//oimg就是背锅侠，就为了试试图片是否正常</span>
+</div><div class="hljs-line">     <span class="hljs-keyword">let</span> oimg = <span class="hljs-keyword">new</span> Image;
+</div><div class="hljs-line">     oimg.src = img[i].getAttribute(<span class="hljs-string">'pic'</span>);
+</div><div class="hljs-line">     oimg.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">         img[i].src = img[i].getAttribute(<span class="hljs-string">'pic'</span>);
+</div><div class="hljs-line">         <span class="hljs-comment">//删除pic</span>
+</div><div class="hljs-line">         img[i].removeAttribute(<span class="hljs-string">'pic'</span>);
+</div><div class="hljs-line">         <span class="hljs-comment">//异步队列</span>
+</div><div class="hljs-line">         setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+</div><div class="hljs-line">             img[i].style.opacity = <span class="hljs-number">1</span>;
+</div><div class="hljs-line">         });
+</div><div class="hljs-line">     }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">     oimg.onerror = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">         img[i].src = <span class="hljs-string">'./img/timg.jpg'</span>;
+</div><div class="hljs-line">         <span class="hljs-comment">//删除pic</span>
+</div><div class="hljs-line">         img[i].removeAttribute(<span class="hljs-string">'pic'</span>);
+</div><div class="hljs-line">         <span class="hljs-comment">//异步队列</span>
+</div><div class="hljs-line">         setTimeout(<span class="hljs-function"><span class="hljs-params">()</span>=&gt;</span>{
+</div><div class="hljs-line">             img[i].style.opacity = <span class="hljs-number">1</span>;
+</div><div class="hljs-line">         });
+</div><div class="hljs-line">     }
+</div><div class="hljs-line"> }
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line">}
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><span class="hljs-comment">// console.log(scrollT + winH,t.po(lis[6]).top);</span>
+</div><div class="hljs-line">}
+</div></code></pre>
+
+
+
+<h4 id="替换图片">替换图片</h4>
+
+<ul><li><p><strong>onload  图片加载成功的时候触发</strong></p></li>
+<li><p><strong>onerror 图片加载失败的时候触发</strong></p>
+
+<blockquote>
+  <p>如果发现某张图是坏图，那么在onerror中重新赋值一个好的(预备)图片即可</p>
+</blockquote></li>
+</ul>
+
+<p><code>let timg = new Image; <br>
+ timg.src = './img/1.jpg'; <br>
+ timg.onload = function(){ <br>
+     // alert('好图'); <br>
+     img.src = './img/1.jpg'; <br>
+ } <br>
+ timg.onerror = function(){ <br>
+     // alert('坏'); <br>
+     img.src = './img/timg.jpg'; <br>
+ }</code></p>
+
+
+
+<h3 id="修改class">修改class</h3>
+
+<ul><li><p>元素身上有个classList对象</p>
+
+<ul>
+<li><p>add(类名)  添加类名</p></li>
+<li><p>remove(类名) 删除类名</p></li>
+<li><p>replace(替换谁，替换成什么)替换</p></li>
+<li><p>contains(类名) 布尔值</p></li>
+<li><p>toggle(类名) 切换  返回值还是布尔值 <br>
+<code>document.onclick = function(){ <br>
+// addClass(box,'red'); <br>
+// box.classList.add('red'); <br>
+// box.classList.replace('bg','red'); <br>
+// console.log(box.classList.contains('bg')) <br>
+console.log(box.classList.toggle('bg')); <br>
+console.log(box.classList); <br>
+} <br>
+function addClass(obj,cname){ <br>
+let cn = obj.className; <br>
+if(!cn.split(' ').includes(cname)){ <br>
+    cn += ' red'; <br>
+    obj.className =  cn; <br>
+}; <br>
+}</code></p></li></ul></li>
+</ul>
+
+
+
+<h3 id="运动函数-tween">运动函数   Tween</h3>
+
+<ul><li><p>ActionScript  -&gt; AS</p></li>
+</ul>
+
+
+
+<h4 id="速度版运动">速度版运动</h4>
+
+
+
+<h4 id="时间版运动">时间版运动</h4>
+
+<ul><li><p>t : time 已过时间</p></li>
+<li><p>b : begin 起始值</p></li>
+<li><p>c : count 总的运动值</p></li>
+<li><p>d : duration 持续时间</p></li>
+</ul>
+
+
+
+<h5 id="动画帧">动画帧:</h5>
+
+<ul><li><p><strong>requestAnimationFrame(函数)   动画帧</strong></p>
+
+<ul>
+<li><p>返回值为number（编号）</p></li></ul></li>
+<li><p><strong>cancelAnimationFrame(编号)  关闭动画帧</strong></p></li>
+<li><p>匀速运动:</p>
+
+<ul>
+<li><p>b + c * (t/d)  </p></li></ul></li>
+</ul>
+
+<h4 id="回调函数">回调函数</h4>
+
+<blockquote>
+  <p>回调（ 钩子函数 ） -&gt; 在做某件事情(某个条件成立)的时候调用函数</p>
+</blockquote>
+
+<ul><li><p>点击 onclick</p>
+
+<ul>
+<li><p>在按下的时候 + 抬起的时候 = 点击</p></li></ul></li>
+<li><p>onmousedown -&gt; 鼠标按下</p></li>
+<li><p>onmouseup -&gt; 鼠标抬起</p></li>
+</ul>
+
+<h3 id="事件">事件</h3>
+
+<blockquote>
+  <p>1、每个元素天生都有很多属性、方法及事件，如果没有事件函数，赋值此时事件的默认值为null <br>
+  2、如果有系统内置的事件默认值为null，自定义的事件为undefined <br>
+  3、当用户操作浏览器的时候，用户被当做被监听者，浏览器一直监听者用户的操作，会触发若干个事件，如果某个事件上有事件函数，那么就被执行</p>
+</blockquote>
+
+<ul><li><p><strong>DOM0级事件</strong></p>
+
+<ul>
+<li><p>on事件 + 事件函数为原始的事件绑定方式</p></li>
+<li><p>解除事件将某个元素的事件赋值为null</p>
+
+<ul>
+<li><p>ele.事件 = null </p></li></ul></li></ul></li>
+<li><p>1级DOM–(为什么没有1级DOM)</p>
+
+<ul>
+<li><p>DOM级别1于1998年10月1日成为W3C推荐标准。1级DOM标准中并没有定义事件相关的内容，所以没有所谓的1级DOM事件模型。在2级DOM中除了定义了一些DOM相关的操作之外还定义了一个事件模型 ，这个标准下的事件模型就是我们所说的2级DOM事件模型 </p></li></ul></li>
+<li><p><strong>DOM2级事件</strong></p>
+
+<ul>
+<li><p>事件绑定:</p>
+
+<ul>
+<li><p>ele.addEventListener(‘不带on的事件名’,函数,是否捕获)</p></li></ul></li>
+<li><p>事件解除:(重要的是解除绑定)</p>
+
+<ul>
+<li><p>ele.removeEventListener(‘不带on的事件名’,有名函数(和绑定函数一个地址),是否捕获) <br>
+<code>btn.addEventListener('click',c.bind(this)); <br>
+function c(){ <br>
+alert(1); <br>
+//绑定和解除绑定不是同一地址，所以解除不了 <br>
+btn.removeEventListener('click',c); <br>
+}</code></p></li></ul></li></ul></li>
+<li><p><strong>onclick  点击</strong></p></li>
+<li><p><strong>onmouseover  移入</strong></p></li>
+<li><p><strong>onmouseout  移出</strong></p></li>
+<li><p><strong>onmousedown  鼠标按下</strong></p></li>
+<li><p><strong>onmouseup  鼠标抬起</strong></p></li>
+<li><p><strong>onscroll 有滚动条的时候滚轮时触发</strong></p></li>
+<li><p><strong>onload  加载完后</strong></p></li>
+<li><p><strong>onerror  异常加载</strong></p></li>
+<li><p><strong>onhashchange  当hash值发生变化的时候就触发</strong></p></li>
+<li><p><strong>onresize  缩放浏览器的时候触发的事件</strong></p></li>
+</ul>
+
+<h4 id="事件模型">事件模型</h4>
+
+<ul><li><p>从捕获阶段 到 目标阶段 再到 冒泡阶段 的过程称为<strong>事件流</strong>。</p>
+
+<ul>
+<li><p>先执行捕获再执行冒泡</p></li>
+<li><p>如果事件绑定的是目标元素，那么是按照绑定事件函数的先后顺序来依次执行（跟捕获冒泡没关系）</p></li></ul></li>
+<li><p>从window 到 目标点的阶段叫<strong>捕获阶段</strong>。</p>
+
+<ul>
+<li><p>在捕获的过程中，如果上级和下级(祖先级关系)绑定同一事件函数；那么先触发上级的在触发下级的</p></li>
+<li><p>DOM0捕获不到捕获阶段，只有冒泡阶段。 <br>
+<code>box1.addEventListener(不带on的事件名,function(){ <br>
+    alert('red'); <br>
+},是否捕获); <br>
+捕获就为: true <br>
+冒泡就为:false  （默认）</code></p></li></ul></li>
+<li><p>从目标点由下而上 直到window 叫做<strong>冒泡阶段</strong> 。</p>
+
+<ul>
+<li><p>在这个过程中，如果上级和下级同理有祖先关系，绑定同一事件函数 先触发目标 再触发目标的上级，这整个过程叫做<strong>事件流 事件模型</strong></p></li></ul></li>
+<li><p>祖先级关系 是套个多层 </p></li>
+</ul>
+
+<h4 id="冒泡的坏处阻止冒泡">冒泡的坏处–阻止冒泡</h4>
+
+<ul><li><p>事件函数中的第一个参数，默认为<strong>事件对象</strong></p></li>
+<li><p><strong>事件对象:</strong></p>
+
+<ul>
+<li><p>当用户触发某个事件的时候，记录用户操作页面的一些细节信息</p></li></ul></li>
+<li><p><strong>阻止冒泡</strong>：(目的是为了不让自己冒泡触发祖先级的同一事件)</p>
+
+<ul>
+<li><p>ev.cancelBubble = true;  它不是一个标准，但是所有浏览器都支持</p></li>
+<li><p>ev.stopPropagation(); 它是标准，但是在低版本IE下是不兼容的</p></li></ul></li>
+<li><p>chrome/IE</p>
+
+<ul>
+<li><p>window中都有一个event</p></li></ul></li>
+<li><p>FF中是没有event对象的  <br>
+<code>let onoff = true; <br>
+btn.onclick = function(ev){ <br>
+    if(onoff){ <br>
+        box.style.display = 'block'; <br>
+        btn.innerHTML = '隐藏' <br>
+    }else{ <br>
+        box.style.display = 'none'; <br>
+        btn.innerHTML = '打开' <br>
+    } <br>
+    onoff = !onoff; <br>
+    // alert(1); <br>
+    // ev.cancelBubble = true; <br>
+    ev.stopPropagation(); <br>
+    // console.log(ev) <br>
+} <br>
+document.onclick = function(){ <br>
+box.style.display = 'none'; <br>
+onoff = true; <br>
+btn.innerHTML = '打开' <br>
+}</code></p></li>
+</ul>
+
+<h4 id="冒泡的好处事件委托">冒泡的好处–事件委托</h4>
+
+<ul><li><p><strong>ev.target  目标点(事件源)</strong></p>
+
+<ul>
+<li><p>在嵌套关系中，给上层元素绑定事件，可以通过事件源查到事件触发的对象(元素)</p></li></ul></li>
+<li><p><strong>tagName 查看标签名  注意：大写</strong></p></li>
+<li><p>jq中有个delegate原理就是事件委托。 <br>
+<code>ul.onclick = function(ev){ <br>
+// console.log(ev.target) <br>
+if(ev.target.tagName === 'LI'){ <br>
+   console.log(ev.target.parentNode.children) <br>
+   let lis = ev.target.parentNode.children; <br>
+   for(let i=0;i&lt;lis.length;i++){ <br>
+       console.log(lis[i]===ev.target,lis[i],i); <br>
+       if(lis[i] !== ev.target){ <br>
+           lis[i].style.background = ''; <br>
+       }else{ <br>
+           ev.target.style.background = 'green'; <br>
+       } <br>
+   } <br>
+} <br>
+// console.log(ev.target.tagName) <br>
+}</code></p></li>
+</ul>
+
+<h4 id="没有冒泡的也可以阻止穿透">没有冒泡的，也可以阻止穿透</h4>
+
+<ul><li><p><strong>onmouseenter 移入</strong></p></li>
+<li><p><strong>onmouseleave 移出</strong> <br>
+<code>box.onmouseenter = function(){ <br>
+    alert('box移入') <br>
+} <br>
+box.onmouseleave = function(){ <br>
+    alert('bo移出') <br>
+} <br>
+box1.onmouseenter = function(){ <br>
+    alert('box2移入') <br>
+}</code></p></li>
+</ul>
+
+<h4 id="坐标值">坐标值</h4>
+
+<ul><li><p>基于浏览器可视区的顶端</p>
+
+<ul>
+<li><p><strong>ev.clientX  横轴   数字类型</strong></p></li>
+<li><p><strong>ev.clientY  纵轴   数字类型</strong></p></li></ul></li>
+<li><p>基于body的</p>
+
+<ul>
+<li><p><strong>ev.pageX   横轴</strong></p></li>
+<li><p><strong>ev.pageY   纵轴</strong>     </p></li></ul></li>
+</ul>
+
+<h4 id="键盘事件">键盘事件</h4>
+
+<ul><li><p><strong>onkeydown  键盘按下</strong>  获取不到最新的value值</p></li>
+<li><p><strong>onkeyup    键盘抬起</strong>  可以获取到最新的value值</p></li>
+<li><p><strong>ev.keyCode   键码</strong>  获取的值为数字类型</p>
+
+<ul>
+<li><p>37-40  键盘的左上右下</p></li>
+<li><p>空格 32</p></li></ul></li>
+<li><p>特殊按键:</p>
+
+<ul>
+<li><p><strong>ev.ctrlKey</strong></p></li>
+<li><p><strong>ev.shiftKey</strong></p></li>
+<li><p><strong>ev.altKey</strong></p></li></ul></li>
+<li><p>只要按住就为true，否则false <br>
+<code>//第一种2个键值写法 <br>
+    let code = false; <br>
+    txt.onkeydown = function (ev) { <br>
+        if (ev.keyCode === 17) { <br>
+            code = true; <br>
+            console.log(code); <br>
+        } <br>
+    } <br>
+    txt.onkeyup = function (ev) { <br>
+        if (ev.keyCode === 13 &amp;&amp; code) { <br>
+            console.log('bong'); <br>
+        } <br>
+        if (ev.keyCode === 17) { <br>
+            code = false; <br>
+        } <br>
+    }</code> <br>
+<code>//第二种2个键值写法。 <br>
+    txt.onkeyup = function (ev) { <br>
+        if (ev.keyCode === 13 &amp;&amp; ev.shiftKey) { <br>
+            let li = document.createElement('li'); <br>
+            li.innerHTML = this.value; <br>
+            //下面这种写法和上面这种写法结果一样 <br>
+            ul.insertBefore(li, ul.children[0]); <br>
+            txt.value = ''; <br>
+        } <br>
+    }</code></p></li>
+<li><p>当按键的时候会停顿一下，这个停顿有助于提高用户体验，避免重复输入</p></li>
+</ul>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">let</span> numL = <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> numT = <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> timer = <span class="hljs-literal">null</span>;
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.onkeydown = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">ev</span>) </span>{
+</div><div class="hljs-line">   clearInterval(timer);
+</div><div class="hljs-line">   timer = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+</div><div class="hljs-line">       <span class="hljs-keyword">switch</span> (ev.keyCode) {
+</div><div class="hljs-line">           <span class="hljs-keyword">case</span> <span class="hljs-number">39</span>: <span class="hljs-comment">//右</span>
+</div><div class="hljs-line">               numL += <span class="hljs-number">10</span>;
+</div><div class="hljs-line">               box.style.left = numL + <span class="hljs-string">'px'</span>;
+</div><div class="hljs-line">               <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">           <span class="hljs-keyword">case</span> <span class="hljs-number">40</span>: <span class="hljs-comment">//下</span>
+</div><div class="hljs-line">               numT += <span class="hljs-number">10</span>;
+</div><div class="hljs-line">               box.style.top = numT + <span class="hljs-string">'px'</span>;
+</div><div class="hljs-line">               <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">           <span class="hljs-keyword">case</span> <span class="hljs-number">37</span>: <span class="hljs-comment">//左</span>
+</div><div class="hljs-line">               numL -= <span class="hljs-number">10</span>;
+</div><div class="hljs-line">               box.style.left = numL + <span class="hljs-string">'px'</span>;
+</div><div class="hljs-line">               <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">           <span class="hljs-keyword">case</span> <span class="hljs-number">38</span>: <span class="hljs-comment">//上</span>
+</div><div class="hljs-line">               numT -= <span class="hljs-number">10</span>;
+</div><div class="hljs-line">               box.style.top = numT + <span class="hljs-string">'px'</span>;
+</div><div class="hljs-line">               <span class="hljs-keyword">break</span>;
+</div><div class="hljs-line">       }
+</div><div class="hljs-line">   }, <span class="hljs-number">22</span>);
+</div><div class="hljs-line">}
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.onkeyup = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+</div><div class="hljs-line">   clearInterval(timer);
+</div><div class="hljs-line">}
+</div></code></pre></div></body></html>

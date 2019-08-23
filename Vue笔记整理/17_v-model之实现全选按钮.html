@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现全选按钮</title>
+</head>
+<body>
+	<div id="app">
+		<input type="checkbox" v-model="checkAll" @change="changeAll">全选{{checkAll}}  <br>
+		<!-- 这里绑定v-model 绑定的是两个不同的对象，所以这两个input都作为单个绑定，并没有分为一组 -->
+		<input type="checkbox" v-for="item in products" v-model="item.isSelected" @change="checkone" >
+		{{products}}
+	</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vm = new Vue({
+    el:"#app",
+    data:{
+        products:[{isSelected:true},{isSelected:true}],
+        checkAll:true
+    },
+    methods:{
+        // input :
+        // onchange ： 当input的value发生改变时，就会触发这个change事件；在input由于值发生变化，导致触发的事件一般都用change事件；
+        // onclick : 点击的时候，立即执行这个行为绑定的方法；
+        changeAll(){
+            this.products.forEach(item=>{
+                item.isSelected = this.checkAll;
+            })
+        },
+        checkone(){
+            this.checkAll = this.products.every(item=>item.isSelected)
+        }
+    }
+})  
+</script>
+</html>

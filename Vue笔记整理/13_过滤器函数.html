@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过滤器函数</title>
+</head>
+<body>
+    <!-- 管道函数，总是把表达式的返回值作为第一个参数，这里表达式返回值是12.因此 12+5=17 -->
+    <div id="one">{{12|add|addZero}}</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    //全局过滤器
+    Vue.filter("add",function(x){
+        return x+5;
+    });
+
+    let vue_data = new Vue({
+        el:"#one",
+        //私有过滤器
+        filters:{
+            addZero(num){
+                //第一个形参接受管道符前面的值
+                return num+1;
+            }
+        }
+    });
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多个vue绑定一个DOM元素对象，以第一个绑定的为准</title>
+</head>
+<body>
+    <div id="one">{{a}}</div>
+</body>
+<script type="text/javascript" src="../node_modules/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    let vue_data = new Vue({
+        el:"#one",
+        data:{
+            a:1,
+            b:2,
+            c:3
+        }
+    });
+    // 重复绑定多个DOm元素,绑定第一个为准
+    let vue_data1 = new Vue({
+        el:"#one",
+        data:{
+            a:"123",
+            b:"321",
+            c:"213"
+        }
+    });
+</script>
+</html>
